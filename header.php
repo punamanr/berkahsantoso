@@ -75,17 +75,17 @@ License URL: https://creativecommons.org/licenses/by/4.0/
           </button>  
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item" ><a class="nav-link smooth-scroll" href="Home">Home</a></li>
+                <li class="nav-item" ><a class="nav-link smooth-scroll" href="home">Home</a></li>
                 <li class="nav-item dropdown" >
                   <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a> 
                   <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="About">About Us</a>
-                    <a class="dropdown-item" href="Faq">FAQ</a>
-                    <a class="dropdown-item" href="Testimonials">Testimonials</a>
+                    <a class="dropdown-item" href="about">About Us</a>
+                    <a class="dropdown-item" href="faq">FAQ</a>
+                    <a class="dropdown-item" href="testimonials">Testimonials</a>
                   </div>
                 </li>
-                <li class="nav-item" ><a class="nav-link smooth-scroll" href="Services">Services</a></li> 
-                <li class="nav-item" ><a class="nav-link smooth-scroll" href="Contact">Contact Us</a></li> 
+                <li class="nav-item" ><a class="nav-link smooth-scroll" href="services">Services</a></li> 
+                <li class="nav-item" ><a class="nav-link smooth-scroll" href="contact">Contact Us</a></li> 
                 <li class="nav-item dropdown" >
                   <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a> 
                   <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
