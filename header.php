@@ -75,17 +75,17 @@ License URL: https://creativecommons.org/licenses/by/4.0/
           </button>  
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item" ><a class="nav-link smooth-scroll" href="home">Home</a></li>
+                <li class="nav-item" ><a class="nav-link smooth-scroll" href="Home">Home</a></li>
                 <li class="nav-item dropdown" >
                   <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a> 
                   <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="about">About Us</a>
-                    <a class="dropdown-item" href="faq">FAQ</a>
-                    <a class="dropdown-item" href="testimonials">Testimonials</a>
+                    <a class="dropdown-item" href="About">About Us</a>
+                    <a class="dropdown-item" href="Faq">FAQ</a>
+                    <a class="dropdown-item" href="Testimonials">Testimonials</a>
                   </div>
                 </li>
-                <li class="nav-item" ><a class="nav-link smooth-scroll" href="services">Services</a></li> 
-                <li class="nav-item" ><a class="nav-link smooth-scroll" href="contact">Contact Us</a></li> 
+                <li class="nav-item" ><a class="nav-link smooth-scroll" href="Services">Services</a></li> 
+                <li class="nav-item" ><a class="nav-link smooth-scroll" href="Contact">Contact Us</a></li> 
                 <li class="nav-item dropdown" >
                   <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a> 
                   <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
@@ -102,7 +102,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                 <li class="nav-item dropdown" >
                   <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin Panel</a> 
                   <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink"> 
-                    <a class="dropdown-item"  target="_empty" href="admin/index.html">Dashboard</a> 
+                    <a class="dropdown-item"  target="_empty" href="admin/index.php">Dashboard</a> 
                     <a class="dropdown-item"  target="_empty" href="admin/chart.html">Charts</a> 
                     <a class="dropdown-item"  target="_empty" href="admin/email.html">Email</a> 
                     <a class="dropdown-item"  target="_empty" href="admin/faq.html">FAQ</a> 
@@ -184,13 +184,13 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                       </button>
                   </div>
                   <div id="div-forms">
-                      <form id="login-form">
+                      <form id="login-form" action="cek_login.php" method="post">
                           <h3 class="text-center">Login</h3>
                           <div class="modal-body">
                               <label for="username">Username</label> 
-                              <input id="login_username" class="form-control" type="text" placeholder="Enter username " required>
+                              <input id="login_username" name="login_username" class="form-control" type="text" placeholder="Enter username " required>
                               <label for="username">Password</label> 
-                              <input id="login_password" class="form-control" type="password" placeholder="Enter password" required>
+                              <input id="login_password" name="login_password" class="form-control" type="password" placeholder="Enter password" required>
                               <div class="checkbox">
                                   <label>
                                       <input type="checkbox"> Remember me

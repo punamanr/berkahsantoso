@@ -1,3 +1,11 @@
+<?php 
+session_start();
+if (!empty($_SESSION['login_username']))
+{
+$user = $_SESSION['login_username'];
+include '../configuration.php';
+?>  
+
 <!--
 author: Boostraptheme
 author URL: https://boostraptheme.com
@@ -138,7 +146,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                                 <a rel="nofollow" href="#" class="dropdown-item d-flex">
                                     <div class="msg-profile"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
                                     <div class="msg-body">
-                                        <h3 class="h5">Steena Ben</h3><span>steenaben@Businessbox.com</span>
+                                        <h3 class="h5"><?php echo $user ?></h3><span>steenaben@Businessbox.com</span>
                                     </div>
                                 </a>
                                 <hr>
@@ -166,7 +174,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                                 <hr>
                             </li>
                             <li>
-                                <a rel="nofollow" href="profile.html" class="dropdown-item">
+                                <a rel="nofollow" href="../logout.php" class="dropdown-item">
                                     <div class="notification">
                                         <div class="notification-content"><i class="fa fa-power-off"></i>Logout</div>
                                     </div>
@@ -767,3 +775,9 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 </body>
 
 </html>
+<?php } 
+else { ?>
+    <script> alert('Anda tidak mempunyai hak akses! Hubungi Administrator.')
+    document.location="http://<?php echo $_SERVER['HTTP_HOST']?>/berkahsantoso/"
+    </script>
+<?php } ?>

@@ -1,4 +1,6 @@
 <?php 
+session_start();
+// Store Session Data
 include 'header.php';
 ?>   
 
