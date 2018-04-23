@@ -3,7 +3,8 @@ session_start();
 if (!empty($_SESSION['login_username']))
 {
 $user = $_SESSION['login_username'];
-include '../configuration.php';
+$status = $_SESSION['login_status'];
+
 ?>  
 
 <!--
@@ -56,7 +57,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                 <div class="navbar-holder d-flex align-items-center justify-content-between">
                     <div class="navbar-header">
                         <a href="index.html" class="navbar-brand">
-                            <div class="brand-text brand-big hidden-lg-down"><img src="img/logo-white.png" alt="Logo" class="img-fluid"></div>
+                            <div class="brand-text brand-big hidden-lg-down"><img src="../img/bs-w.png" alt="Logo" class="img-fluid"></div>
                             <div class="brand-text brand-small"><img src="img/logo-icon.png" alt="Logo" class="img-fluid"></div>
                         </a>
                         <a id="toggle-btn" href="#" class="menu-btn active">
@@ -146,7 +147,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                                 <a rel="nofollow" href="#" class="dropdown-item d-flex">
                                     <div class="msg-profile"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
                                     <div class="msg-body">
-                                        <h3 class="h5"><?php echo $user ?></h3><span>steenaben@Businessbox.com</span>
+                                        <h3 class="h5"><?php echo $user; ?></h3><span><?php echo $status; ?></span>
                                     </div>
                                 </a>
                                 <hr>
@@ -174,7 +175,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                                 <hr>
                             </li>
                             <li>
-                                <a rel="nofollow" href="../logout.php" class="dropdown-item">
+                                <a rel="nofollow" href="../app/logout.php" class="dropdown-item">
                                     <div class="notification">
                                         <div class="notification-content"><i class="fa fa-power-off"></i>Logout</div>
                                     </div>
@@ -296,7 +297,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
             <div class="sidebar-header d-flex align-items-center">
                 <div class="avatar"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
                 <div class="title">
-                    <h1 class="h4">Steena Ben</h1>
+                    <h1 class="h4"><?php echo $user; ?></h1>
                 </div>
             </div>
             <hr>

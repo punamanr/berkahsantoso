@@ -10,32 +10,20 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
-    // while($row = mysqli_fetch_assoc($result)) {
-    //     echo "id: " . $row["id"]. " - Name: " . $row["username"]. " " . $row["status"]. "<br>";
-    // }
-    $_SESSION['login_username'] = $username;
-    header("location: admin/home");
+    while($row = mysqli_fetch_assoc($result)) {
+      $_SESSION['login_username'] = $row["username"];
+      $_SESSION['login_status'] = $row["status"];
+    }
+    header("location: admin/home"); //redirect ke halaman admin
 } else {
      // echo "Gagal login! Silahkan cek kembali username dan password Anda.";
+  header("location: admin/access_denied.html");
   ?>
+
     <script> alert('Gagal login! Silahkan cek kembali username dan password Anda.')
     document.location="http://<?php echo $_SERVER['HTTP_HOST']?>/berkahsantoso/"
     </script>
     
 <?php }
 
-// $sql = mysqli_query($success, "select * from user where username='$username' and password='$password'");
-// $xxx = mysqli_num_rows($sql);
-
-
-// if($xxx==TRUE)
-// {
-//   // Initializing Session with value of PHP Variable and redirect page if condition is true
-//   $_SESSION['login_username'] = $username;
-//   header("location: admin/index.php");
-// }
-// else
-// {
-//   echo "gagal login";
-// } 
 ?>
