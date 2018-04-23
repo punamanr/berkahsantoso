@@ -1,7 +1,6 @@
 <?php 
 session_start();
-// Store Session Data
-include 'header.php';
+include 'app/header.php';
 ?>   
 
 <!--====================================================
@@ -20,7 +19,7 @@ include 'header.php';
                         <span class="wrap"></span></a></span> </h1>        
                       <h3>Kontruksi tiang pancang untuk Rumah, Gedung, Tower, Apartemen dan lain-lain.</h3>
                   </hgroup>
-                  <button class="btn btn-general btn-green wow fadeInUp" role="button">Contact Now</button>
+                  <a href="contact" class="btn btn-general btn-green wow fadeInUp">Contact Now</a>
                 </div>           
             </div> 
         </div> 
@@ -416,5 +415,5 @@ include 'header.php';
     </section>
 
 <?php 
-include 'footer.php';
+include 'app/footer.php';
 ?>

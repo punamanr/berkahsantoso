@@ -1,8 +1,10 @@
 RewriteEngine on
 
 RewriteRule ^home?$ index.php
-RewriteRule ^contact?$ contact.php
-RewriteRule ^about?$ about.php
-RewriteRule ^faq?$ faq.php
-RewriteRule ^testimonials?$ testimonials.php
-RewriteRule ^services?$ services.php
+RewriteRule ^contact?$ app/contact.php
+RewriteRule ^about?$ app/about.php
+RewriteRule ^faq?$ app/faq.php
+RewriteRule ^testimonials?$ app/testimonials.php
+RewriteRule ^services?$ app/services.php
+RewriteRule ^admin/home?$ admin/index.php
+RewriteRule ^cek_login?$ app/cek_login.php

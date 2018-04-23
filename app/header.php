@@ -67,7 +67,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light" id="mainNav" data-toggle="affix">
         <div class="container">
-          <a class="navbar-brand smooth-scroll" href="index.html">
+          <a class="navbar-brand smooth-scroll" href="home">
             <img src="img/bs.png" alt="logo">
           </a> 
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> 
@@ -184,7 +184,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                       </button>
                   </div>
                   <div id="div-forms">
-                      <form id="login-form" action="cek_login.php" method="post">
+                      <form id="login-form" action="cek_login" method="post">
                           <h3 class="text-center">Login</h3>
                           <div class="modal-body">
                               <label for="username">Username</label> 

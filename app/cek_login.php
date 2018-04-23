@@ -14,10 +14,15 @@ if (mysqli_num_rows($result) > 0) {
     //     echo "id: " . $row["id"]. " - Name: " . $row["username"]. " " . $row["status"]. "<br>";
     // }
     $_SESSION['login_username'] = $username;
-    header("location: admin/index.php");
+    header("location: admin/home");
 } else {
-     echo "Gagal login! Silahkan cek kembali username dan password Anda.";
-}
+     // echo "Gagal login! Silahkan cek kembali username dan password Anda.";
+  ?>
+    <script> alert('Gagal login! Silahkan cek kembali username dan password Anda.')
+    document.location="http://<?php echo $_SERVER['HTTP_HOST']?>/berkahsantoso/"
+    </script>
+    
+<?php }
 
 // $sql = mysqli_query($success, "select * from user where username='$username' and password='$password'");
 // $xxx = mysqli_num_rows($sql);

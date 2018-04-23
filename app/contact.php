@@ -6,7 +6,7 @@ include 'header.php';
 <!--====================================================
                        HOME-P
 ======================================================-->
-    <div id="home-p" class="home-p pages-head4 text-center">
+    <div id="home" class="home-p pages-head4 text-center">
       <div class="container">
         <h1 class="wow fadeInUp" data-wow-delay="0.1s">Contact Us</h1>
       </div><!--/end container-->
