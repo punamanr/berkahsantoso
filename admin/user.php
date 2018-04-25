@@ -27,8 +27,7 @@ if (!empty($_SESSION['login_username']))
                   </div>
                   <div class="row">
                     <div class="col-md-12">
-                                        <br>
-                                        <?php echo basename($_SERVER['PHP_SELF'],'.php')?>
+                      <br>
                       <table class="table table-hover">
                         <thead>
                           <tr class="bg-info text-white">

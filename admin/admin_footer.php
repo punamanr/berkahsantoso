@@ -8,8 +8,10 @@
     <script src="js/chart.min.js"></script> 
     <script src="js/front.js"></script> 
     
-    <!--Core Javascript -->
+    <!--Index Core Javascript -->
+    <?php if( basename($_SERVER['PHP_SELF'], '.php') == 'index' ) { ?>
     <script src="js/mychart.js"></script>
+    <?php } ?>
 </body>
 
 </html>
