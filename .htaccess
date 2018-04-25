@@ -8,3 +8,5 @@ RewriteRule ^testimonials?$ app/testimonials.php
 RewriteRule ^services?$ app/services.php
 RewriteRule ^admin/home?$ admin/index.php
 RewriteRule ^cek_login?$ app/cek_login.php
+RewriteRule ^admin/user?$ admin/user.php
+RewriteRule ^admin/services?$ admin/services.php
