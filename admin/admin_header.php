@@ -4,6 +4,9 @@ author URL: https://boostraptheme.com
 License: Creative Commons Attribution 4.0 Unported
 License URL: https://creativecommons.org/licenses/by/4.0/
 -->
+<?php 
+include '../config/configuration.php';
+?>
 
 <!DOCTYPE html>
 <html>
@@ -16,7 +19,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
 
-    <title>Bootstrap Admin Template </title>
+    <title>Berkah Santoso - Jasa Strauss Pile dan Bored Pile</title>
     <link rel="shortcut icon" href="img/favicon.ico">
     
     <!-- global stylesheets -->
@@ -277,3 +280,4 @@ License URL: https://creativecommons.org/licenses/by/4.0/
             </div>
         </nav>
     </header>
+
