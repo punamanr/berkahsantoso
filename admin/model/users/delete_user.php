@@ -12,7 +12,7 @@ $sql = "DELETE FROM user WHERE id=$id";
 
 if ($conn->query($sql) === TRUE) { ?>
        <script> alert('Account admin berhasil dihapus!')
-       document.location="http://<?php echo $_SERVER['HTTP_HOST']?>/berkahsantoso/admin/user"
+       document.location="http://<?php echo $_SERVER['HTTP_HOST']?>/admin/user"
        </script> 
    <?php } 
 else {
