@@ -8,7 +8,7 @@ $confirm_password = $_POST['confirm_password'];
 $status = $_POST['status'];
 
 if($password == $confirm_password){
-  $sql = "INSERT into user (username, password, status, create_date, update_date)
+  $sql = "INSERT into user (username, password, status, date_create, date_update)
           values ('$username','$password','$status',now(),now())";
 
   if ($conn->query($sql) === TRUE) { ?>
