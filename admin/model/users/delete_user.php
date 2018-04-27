@@ -1,6 +1,6 @@
 <?php
 //delete user
-include '../../../config/configuration.php';
+include '../../../config/configuration_prod.php';
 
 $id = $_GET['id'];
 $username = $_GET['username'];
