@@ -1,6 +1,6 @@
 <?php 
 //proses add user admin
-include '../../../config/configuration.php';
+include '../../../config/configuration_prod.php';
 
 $username = $_POST['username'];
 $password = $_POST['password'];
