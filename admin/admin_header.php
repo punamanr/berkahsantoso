@@ -5,7 +5,7 @@ License: Creative Commons Attribution 4.0 Unported
 License URL: https://creativecommons.org/licenses/by/4.0/
 -->
 <?php 
-include '../config/configuration.php';
+include '../config/configuration_prod.php';
 ?>
 
 <!DOCTYPE html>
