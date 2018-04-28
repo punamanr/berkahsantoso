@@ -11,6 +11,7 @@ RewriteRule ^admin/home?$ admin/index.php
 RewriteRule ^cek_login?$ app/cek_login.php
 RewriteRule ^admin/services?$ admin/services.php
 RewriteRule ^admin/user?$ admin/user.php
+RewriteRule ^admin/model/users/add-user?$ admin/model/users/add_user.php
 RewriteRule ^admin/model/users/delete-user/([0-9]+)/(.*)?$ admin/model/users/delete_user.php?id=$1&username=$2 [NC,L]
 
 

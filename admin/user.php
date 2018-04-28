@@ -21,7 +21,7 @@ if (!empty($_SESSION['login_username']))
                       </button>
                   </div>
                   <div id="div-forms">
-                      <form id="login-form" action="model/users/add_user.php" method="post">
+                      <form id="login-form" action="model/users/add-user" method="post">
                           <h3 class="text-center">Tambah Admin</h3>
                           <div class="modal-body">
                               <label for="username">Username</label> 
