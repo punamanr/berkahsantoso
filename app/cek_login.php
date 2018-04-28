@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include 'configuration.php';
+include '../config/configuration.php';
 
 $username=$_POST['login_username'];
 $password=$_POST['login_password'];
@@ -17,7 +17,7 @@ if (mysqli_num_rows($result) > 0) {
     header("location: admin/home"); //redirect ke halaman admin
 } else {
      // echo "Gagal login! Silahkan cek kembali username dan password Anda.";
-  header("location: admin/access_denied.html");
+  header("location: admin/access-denied");
   ?>
 
     <script> alert('Gagal login! Silahkan cek kembali username dan password Anda.')

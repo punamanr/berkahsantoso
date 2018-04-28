@@ -6,6 +6,7 @@ RewriteRule ^about?$ app/about.php
 RewriteRule ^faq?$ app/faq.php
 RewriteRule ^testimonials?$ app/testimonials.php
 RewriteRule ^services?$ app/services.php
+RewriteRule ^admin/access-denied?$ admin/access_denied.html
 RewriteRule ^admin/home?$ admin/index.php
 RewriteRule ^cek_login?$ app/cek_login.php
 RewriteRule ^admin/services?$ admin/services.php
