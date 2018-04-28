@@ -19,7 +19,9 @@ if($password == $confirm_password){
       echo "Error: " . $sql . "<br>" . $conn->error;
   }
 }
+
 else { 
       echo "<script>alert('Gagal! Password dan Confirm Password tidak sama!')
       location.replace('../../user')</script>";
 } ?>
+
