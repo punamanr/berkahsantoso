@@ -13,7 +13,7 @@ if($password == $confirm_password){
 
   if ($conn->query($sql) === TRUE) { 
       echo "<script>alert('Sukses! Username $username berhasil ditambahkan sebagai Admin.')
-      location.replace('admin/user')</script>";
+      location.replace('../../user')</script>";
   } 
   else {
       echo "Error: " . $sql . "<br>" . $conn->error;
@@ -21,5 +21,5 @@ if($password == $confirm_password){
 }
 else { 
       echo "<script>alert('Gagal! Password dan Confirm Password tidak sama!')
-      location.replace('admin/user')</script>";
+      location.replace('../../user')</script>";
 } ?>
