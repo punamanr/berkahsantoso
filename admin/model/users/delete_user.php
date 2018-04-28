@@ -10,11 +10,10 @@ $username = $_GET['username'];
 
 $sql = "DELETE FROM user WHERE id=$id";
 
-if ($conn->query($sql) === TRUE) { ?>
-       <script> alert('Account admin berhasil dihapus!')
-       document.location="http://<?php echo $_SERVER['HTTP_HOST']?>/berkahsantoso/admin/user"
-       </script> 
-   <?php } 
+if ($conn->query($sql) === TRUE) { 
+        echo "<script>alert('Account $username berhasil dihapus!')
+        location.replace('admin/user')</script>";
+   } 
 else {
     echo "Error deleting record: " . $conn->error;
 }
