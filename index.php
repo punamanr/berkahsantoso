@@ -2,6 +2,7 @@
 @session_start();
 include 'app/header.php';
 include 'config/configuration.php';
+include 'app/log_access.php';
 ?>   
 
 <!--====================================================
@@ -221,10 +222,9 @@ include 'config/configuration.php';
               <div class="story-desc">
                 <h3>Kantor Alfamidi DC Surabaya</h3>
                 <div class="heading-border-light"></div> 
-                <p>Jasa kontruksi tiang pancang untuk kantor Alfamidi DC Surabaya menggunakan Bored Pile.</p>
-                <p>You can find some thoughts on success from our students and alumni here – every story is unique, but this is what success is. Everybody sees it differently. Many desktop publishing packages and web page editors now use Lorem Ipsum.</p>
-                <p class="text-right" style="font-style: italic; font-weight: 700;"><a href="#">PT. Midi Utama Indonesia, Tbk</a></p>
-                <div class="title-but"><button class="btn btn-general btn-green" role="button">Read More</button></div>
+                <p>Pembuatan kontruksi tiang pancang untuk kantor Alfamidi DC Surabaya menggunakan Bored Pile.</p>
+                <!--p class="text-right" style="font-style: italic; font-weight: 700;"><a href="#">PT. Midi Utama Indonesia, Tbk</a></p-->
+                <div class="title-but"><button class="btn btn-general btn-green" role="button">More</button></div>
               </div>
             </div>
           </div>
@@ -319,7 +319,7 @@ include 'config/configuration.php';
 <!--====================================================
                       CLIENT
 ======================================================-->
-    <section id="client" class="client">
+    <!--section id="client" class="client">
       <div class="container">
         <div class="row title-bar">
           <div class="col-md-12">
@@ -349,7 +349,7 @@ include 'config/configuration.php';
           </div>
         </div>
       </div>        
-    </section>  
+    </section-->  
 
 <!--====================================================
                     CONTACT HOME
