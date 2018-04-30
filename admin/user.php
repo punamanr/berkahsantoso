@@ -30,12 +30,16 @@ if (!empty($_SESSION['login_username']))
                               <input id="password" name="password" class="form-control" type="password" placeholder="Enter password" required>
                               <label for="username">Confirm Password</label> 
                               <input id="confirm_password" name="confirm_password" class="form-control" type="password" placeholder="Confirm password" required>
+                              <?php if($status == 'superadmin') { ?>
                               <label for="status">Status</label> 
                               <select class="form-control" name="status" required>
                                   <option value="">Select status</option>
                                   <option value="superadmin">Superadmin</option>
                                   <option value="administrator">Administrator</option>
                               </select>
+                              <?php } else { ?>
+                              <input type="hidden" name="status" value="administrator">
+                              <?php } ?>
                           </div>
                           <div class="modal-footer text-center">
                               <div>
@@ -90,9 +94,9 @@ if (!empty($_SESSION['login_username']))
                           ?>
                           <tr>
                             <th scope="row"><?php echo $no++;?></th>
-                            <td><?php echo $row['username'];?></td>
-                            <td><?php echo $row['password'];?></td>
-                            <td><?php echo $row['status'];?></td>
+                            <td><?php echo strtoupper($row['username']);?></td>
+                            <td><?php echo strtoupper($row['password']);?></td>
+                            <td><?php echo strtoupper($row['status']);?></td>
                             <td>                     
                               <center>
                                 <a href="model/users/delete-user/<?php echo $row['id']?>/<?php echo $row['username']?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin akan menghapus account ini?')">Hapus</a>
