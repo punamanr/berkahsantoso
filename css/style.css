@@ -932,6 +932,10 @@ p {
         background: #f0f0f0;
     }
 
+    .bg-green-yellow {
+        background: #778899;
+    }
+
     .bg-light-gray {
         background: #f9f9f9;
     }

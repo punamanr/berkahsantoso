@@ -1,6 +1,7 @@
 <?php 
 @session_start();
 include 'app/header.php';
+include 'config/configuration.php';
 ?>   
 
 <!--====================================================
@@ -33,35 +34,42 @@ include 'app/header.php';
       <div class="container">
         <div class="row title-bar">
           <div class="col-md-12">
-            <h1 class="wow fadeInUp">Siapa kami?</h1>
+            <h1 class="wow fadeInUp">Tentang Kami</h1>
             <div class="heading-border"></div>
-            <p class="wow fadeInUp" data-wow-delay="0.4s">Berkah Santoso adalah Jasa Pondasi Perorangan yang bergerak dibidang jasa konstruksi dan sipil khususnya pekerjaan pondasi tiang pancang untuk rumah, gedung-gedung, tower, apartemen dan lain-lain dengan metoda Straus Pile dan Bored Pile.</p>
-            <div class="title-but"><a href="about" class="btn btn-general btn-green">Read More</a></div>
+            <p class="wow fadeInUp" data-wow-delay="0.4s">Berkah Santoso adalah Jasa Pondasi Perorangan yang bergerak dibidang jasa konstruksi dan sipil khususnya pekerjaan pondasi tiang pancang untuk rumah, gedung-gedung, tower, apartemen dan lain-lain dengan metoda Straus Pile dan Bored Pile. Dengan dukungan oleh Tenaga Ahli yang berpengalaman dan peralatan workshop modern yang lengkap.</p>
+            <!--div class="title-but"><a href="about" class="btn btn-general btn-green">Read More</a></div-->
           </div>
         </div>
       </div>  
       <!-- About right side withBG parallax -->
       <div class="container-fluid">
         <div class="row"> 
-          <div class="col-md-4 bg-starship">
+          <div class="col-md-3 bg-starship">
             <div class="about-content-box wow fadeInUp" data-wow-delay="0.3s">
               <i class="fa fa-snowflake-o"></i>
               <h5>Best Quality</h5>
               <p class="desc">Memberikan kualitas pengerjaan proyek yang terbaik dan hasil yang semaksimal mungkin.</p>
             </div>
           </div> 
-          <div class="col-md-4 bg-chathams">
+          <div class="col-md-3 bg-chathams">
             <div class="about-content-box wow fadeInUp" data-wow-delay="0.5s">
               <i class="fa fa-circle-o-notch"></i>
               <h5>Best Service</h5>
               <p class="desc">Kepuasan pelayanan terbaik terhadap pelanggan dimanapun dan kapanpun.</p>
             </div>
           </div> 
-          <div class="col-md-4 bg-matisse">
+          <div class="col-md-3 bg-matisse">
             <div class="about-content-box wow fadeInUp" data-wow-delay="0.7s">
-              <i class="fa fa-hourglass-o"></i>
+              <i class="fa fa-handshake-o"></i>
               <h5>Best Companion</h5> 
               <p class="desc">Selalu menjadi mitra terbaik dan terpercaya untuk pelanggan.</p>
+            </div>
+          </div> 
+          <div class="col-md-3 bg-green-yellow">
+            <div class="about-content-box wow fadeInUp" data-wow-delay="0.7s">
+              <i class="fa fa-money"></i>
+              <h5>Best Price</h5> 
+              <p class="desc">Harga yang bersahabat dengan hasil maksimal.</p>
             </div>
           </div> 
         </div> 
@@ -79,7 +87,27 @@ include 'app/header.php';
             <div class="heading-border-light"></div> 
             <button class="btn btn-general btn-white" role="button">Contact Us Today</button>
           </div>
+          <?php 
+          $sql = "SELECT * FROM  services";
+          $result = mysqli_query($conn, $sql);
+
+          while($row = mysqli_fetch_assoc($result)) {
+          ?>
           <div class="col-md-4 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.4s">
+            <div class="desc-comp-offer-cont">
+              <div class="thumbnail-blogs">
+                  <div class="caption">
+                    <i class="fa fa-chain"></i>
+                  </div>
+                  <img src="admin/<?php echo $row['url_gambar'];?>" class="img-thumbnail rounded" alt="...">
+              </div>
+              <h3><?php echo $row['judul']; ?></h3>
+              <p style="text-align: justify; text-indent: 0.3in;" class="desc"><?php echo $row['deskripsi'];?> </p>
+              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Lanjut...</a>
+            </div>
+          </div> 
+          <?php } ?>
+          <!--div class="col-md-4 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.4s">
             <div class="desc-comp-offer-cont">
               <div class="thumbnail-blogs">
                   <div class="caption">
@@ -104,7 +132,7 @@ include 'app/header.php';
               <p class="desc">Pondasi Bore Pile hampir sama dengan Strauss Pile. Yang membedakan adalah dalam pelaksaannya, pondasi bore pile dikerjakan dengan mesin Crane. Dengan alat ini dapat dikerjakan pondasi dengan diameter 30cm , 40cm , 50cm dan 60cm kedalaman pondasi mencapai 30 meter. Metode bore pile sering digunakan untuk bangunan lebih dari 3 lantai.</p>
               <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Lanjut...</a>
             </div>
-          </div>
+          </div-->
         </div>
       </div>
     </section>
@@ -116,17 +144,17 @@ include 'app/header.php';
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-3">
-            <h3>What we Do</h3>
+            <h3>Mengapa memilih kami</h3>
             <div class="heading-border-light"></div> 
-            <p class="desc">We partner with clients to put recommendations into practice. </p>
+            <p class="desc">Kami bermitra dengan klien untuk menerapkan rekomendasi terbaik dalam praktik pengerjaan proyek. </p>
           </div>
           <div class="col-md-9">
             <div class="row">
               <div class="col-md-4  col-sm-6">
                 <div class="what-we-desc">
-                  <i class="fa fa-briefcase"></i>
-                  <h6>Workspace</h6>
-                  <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                  <i class="fa fa-thumbs-o-up"></i>
+                  <h6>JAMINAN KUALITAS</h6>
+                  <p class="desc">Pembuatan  </p>
                 </div>
               </div>
               <div class="col-md-4  col-sm-6">
@@ -139,14 +167,14 @@ include 'app/header.php';
               <div class="col-md-4  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-building-o"></i>
-                  <h6>Apartments</h6>
+                  <h6>Apartemen</h6>
                   <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
                 </div>
               </div>
               <div class="col-md-4  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-bed"></i>
-                  <h6>Hotels</h6>
+                  <h6>Hotel</h6>
                   <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
                 </div>
               </div>
@@ -159,8 +187,8 @@ include 'app/header.php';
               </div>
               <div class="col-md-4  col-sm-6">
                 <div class="what-we-desc">
-                  <i class="fa fa-cutlery"></i>
-                  <h6>Restaurant</h6>
+                  <i class="fa fa-home"></i>
+                  <h6>Perumahan</h6>
                   <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
                 </div>
               </div>
