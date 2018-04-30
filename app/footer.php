@@ -73,7 +73,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div id="footer-copyrights">
-                            <p>Copyrights &copy; 2017 All Rights Reserved by Businessbox. <a href="#">Privacy Policy</a> <a href="#">Terms of Services</a></p>
+                            <p>Copyrights &copy; 2018 All Rights Reserved by Berkah Santoso.</p>
                         </div>
                     </div> 
                 </div>

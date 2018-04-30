@@ -93,13 +93,13 @@ include 'config/configuration.php';
 
           while($row = mysqli_fetch_assoc($result)) {
           ?>
-          <div class="col-md-4 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.4s">
+          <div class="col-md-4 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.6s">
             <div class="desc-comp-offer-cont">
               <div class="thumbnail-blogs">
                   <div class="caption">
                     <i class="fa fa-chain"></i>
                   </div>
-                  <img src="admin/<?php echo $row['url_gambar'];?>" class="img-thumbnail rounded" alt="...">
+                  <img src="admin/<?php echo $row['url_gambar'];?>" class="img-thumbnail" alt="...">
               </div>
               <h3><?php echo $row['judul']; ?></h3>
               <p style="text-align: justify; text-indent: 0.3in;" class="desc"><?php echo $row['deskripsi'];?> </p>
@@ -152,15 +152,15 @@ include 'config/configuration.php';
             <div class="row">
               <div class="col-md-4  col-sm-6">
                 <div class="what-we-desc">
-                  <i class="fa fa-thumbs-o-up"></i>
-                  <h6>JAMINAN KUALITAS</h6>
-                  <p class="desc">Pembuatan  </p>
+                  <i class="fa fa-briefcase"></i>
+                  <h6>Gedung Kantor</h6>
+                  <p class="desc">Pembuatan pondasi tiang pancang perkantoran kecil sampai dengan perkantoran besar.  </p>
                 </div>
               </div>
               <div class="col-md-4  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-shopping-bag"></i>
-                  <h6>Storefront</h6>
+                  <h6>Warehouse</h6>
                   <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
                 </div>
               </div>
@@ -189,7 +189,7 @@ include 'config/configuration.php';
                 <div class="what-we-desc">
                   <i class="fa fa-home"></i>
                   <h6>Perumahan</h6>
-                  <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                  <p class="desc">Pembuatan pondasi tiang pancang untuk perumahan sederhana maupun perumahan elit. </p>
                 </div>
               </div>
             </div>
@@ -205,7 +205,7 @@ include 'config/configuration.php';
         <div class="container">
           <div class="row title-bar">
             <div class="col-md-12">
-              <h1 class="wow fadeInUp">Our Success Tranformation Story</h1>
+              <h1 class="wow fadeInUp">Portofolio</h1>
               <div class="heading-border"></div> 
             </div>
           </div>
@@ -219,11 +219,11 @@ include 'config/configuration.php';
             </div>
             <div class="col-md-6">
               <div class="story-desc">
-                <h3>How to grow world with Us</h3>
+                <h3>Kantor Alfamidi DC Surabaya</h3>
                 <div class="heading-border-light"></div> 
-                <p>Everyone defines success differently – as much as there are people, there are different opinions. Number one in our priority list is the success of our students, alumni and their employers. We work hard in the name of the success of our alumni – being among the best and holding the high employment rate. Many desktop publishing packages and web page editors now use Lorem Ipsum.. </p>
+                <p>Jasa kontruksi tiang pancang untuk kantor Alfamidi DC Surabaya menggunakan Bored Pile.</p>
                 <p>You can find some thoughts on success from our students and alumni here – every story is unique, but this is what success is. Everybody sees it differently. Many desktop publishing packages and web page editors now use Lorem Ipsum.</p>
-                <p class="text-right" style="font-style: italic; font-weight: 700;"><a href="#">Businessbox</a></p>
+                <p class="text-right" style="font-style: italic; font-weight: 700;"><a href="#">PT. Midi Utama Indonesia, Tbk</a></p>
                 <div class="title-but"><button class="btn btn-general btn-green" role="button">Read More</button></div>
               </div>
             </div>
@@ -233,26 +233,24 @@ include 'config/configuration.php';
           <div class="row">
             <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"> 
               <div class="story-descb">
-                  <img src="img/news/news-10.jpg" class="img-fluid" alt="...">
-                  <h6>Virtual training systems</h6>
-                  <p>Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                  <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Read More</a>
+                  <img src="img/tamansari.jpg" class="img-fluid" alt="...">
+                  <h6>The Hill Tamansari Recidence</h6>
+                  <p>Jasa kontruksi tiang pancang dengan Bored Pile untuk perumahan The Hill Tamansari Residence di daerah Tembalang, Mangunharjo, Kota Semarang.</p>
+                  <!--a href="#"><i class="fa fa-arrow-circle-o-right"></i> Read More</a-->
               </div>
             </div>
             <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s"> 
               <div class="story-descb">
-                  <img src="img/news/news-2.jpg" class="img-fluid" alt="...">
-                  <h6>Design planning</h6>
-                  <p>Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                  <a href=""><i class="fa fa-arrow-circle-o-right"></i> Read More</a>
+                  <img src="img/chalcedony.jpg" class="img-fluid" alt="...">
+                  <h6>Chalcedony Residence</h6>
+                  <p>Jasa kontruksi tiang pancang dengan Bored Pile untuk perumahan Summarecon Serpong Cluster Chalcedony Residence, Tangerang - Banten.</p>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s"> 
               <div class="story-descb">
-                  <img src="img/news/news-8.jpg" class="img-fluid" alt="...">
-                  <h6>Remote condition monitoring</h6>
-                  <p>Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                  <a href=""><i class="fa fa-arrow-circle-o-right"></i> Read More</a>
+                  <img src="img/jababeka.jpg" class="img-fluid" alt="...">
+                  <h6>Jababeka Residence</h6>
+                  <p>Jasa kontruksi tiang pancang menggunakan Strauss Pile untuk perumahan Jababeka Residence, Cikarang - Bekasi, Jawa Barat.</p>
               </div>
             </div>                        
           </div>
