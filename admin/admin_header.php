@@ -12,7 +12,7 @@ include '../config/configuration.php';
 <html>
 
 <head>
-    <base href="http://localhost/berkahsantoso/admin/">
+    <base href="<?php echo "http://".$_SERVER['HTTP_HOST']."/admin/" ?>">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
