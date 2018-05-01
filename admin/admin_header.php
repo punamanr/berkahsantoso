@@ -12,7 +12,7 @@ include '../config/configuration.php';
 <html>
 
 <head>
-	<base href="https://berkahsantoso-prod.herokuapp.com/admin/">
+	<base href="http://localhost/berkahsantoso/admin/">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="">

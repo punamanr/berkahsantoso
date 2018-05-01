@@ -11,6 +11,7 @@ RewriteRule ^admin/home?$ admin/index.php
 RewriteRule ^cek_login?$ app/cek_login.php
 RewriteRule ^admin/services?$ admin/services.php
 RewriteRule ^admin/services-form?$ admin/services_form.php
+RewriteRule ^admin/services-form/(css|js|img)/(.*)?$ /$1/$2 [L,QSA,R=301]
 RewriteRule ^admin/services-form/([0-9]+)/(.*)?$ admin/services_form.php?id=$1&action=$2 
 RewriteRule ^admin/model/services/add-services?$ admin/model/services/add_services.php
 RewriteRule ^admin/model/services/update-services?$ admin/model/services/update_services.php
