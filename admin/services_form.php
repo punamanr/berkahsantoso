@@ -6,6 +6,16 @@ if (!empty($_SESSION['login_username']))
   $status = $_SESSION['login_status'];
   include 'admin_header.php';
   $menu = "Content";
+
+  //get data edit layanan
+  $id = $_GET['id'];
+  $action = $_GET['action'];
+
+  if($id != '') 
+  {
+    //echo 'include query';
+    include 'model/services/model_services.php';
+  }
 ?>
 <!-- Core stylesheets -->
 <link rel="stylesheet" href="css/form.css">
@@ -59,7 +69,52 @@ if (!empty($_SESSION['login_username']))
                 <h3>Services Form</h3>
             </div>
             <br>
-            <form method="post" action="model/services/add-services" enctype="multipart/form-data">
+            <?php 
+              if($action == 'edit'){
+              /* fetch object array */
+              while ($obj = $result->fetch_object()) {
+            ?>
+            <form method="post" action="model/services/update-services" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-6">
+                      <br>
+                        <div class="form-group">
+                            <label for="judulLayanan">Judul Layanan</label>
+                            <input type="text" class="form-control" name="judul" maxlength="75" value="<?php echo $obj->judul ?>">
+                            <input type="hidden" class="form-control" name="id" maxlength="75" value="<?php echo $obj->id ?>">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleTextarea">Deskripsi Layanan</label>
+                            <textarea class="form-control" id="exampleTextarea" rows="5" name="deskripsi" maxlength="1000"><?php echo $obj->deskripsi ?></textarea>
+                            <small id="fileHelp" class="form-text text-muted">Maksimal 1000 karakter.</small>
+                        </div>
+                        <fieldset class="form-group">
+                            <label>Publikasikan</label>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="mb-2 mr-sm-1 mb-sm-0" name="publish" id="optionsRadios1" value="ya" <?php if($obj->publish == 'ya'){?> checked <?php } else { }?>> Ya &emsp;
+                                    <input type="radio" class="mb-2 mr-sm-1 mb-sm-0" name="publish" id="optionsRadios2" value="tidak" <?php if($obj->publish == 'tidak'){?> checked <?php } else {}?>> Tidak
+                                </label>
+                            </div>
+                        </fieldset>        
+                    </div>
+                    <div class="col-md-6">
+                      <br>
+                        <div class="form-group">
+                            <label for="exampleInputFile">Gambar Profile Layanan</label>
+                            <input id="fileUpload"  class="form-control-file" multiple="multiple" name="file" type="file"/> 
+                            <small id="fileHelp" class="form-text text-muted">Maksimal size 2 Mb. (Kosongkan jika tidak ingin mengganti gambar.)</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleTextarea">Preview Gambar</label><br>
+                            <div id="image-holder"><img src="<?php echo $obj->url_gambar;?>" class="img-thumbnail"></div>
+                        </div>
+                     </div>
+                </div> 
+                <?php } }
+                else { ?>
+                <form method="post" action="model/services/add-services" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-md-6">
                       <br>
@@ -69,7 +124,7 @@ if (!empty($_SESSION['login_username']))
                         </div>
                         <div class="form-group">
                             <label for="exampleTextarea">Deskripsi Layanan</label>
-                            <textarea class="form-control" id="exampleTextarea" rows="4" name="deskripsi" maxlength="1000"></textarea>
+                            <textarea class="form-control" id="exampleTextarea" rows="5" name="deskripsi" maxlength="1000"></textarea>
                             <small id="fileHelp" class="form-text text-muted">Maksimal 1000 karakter.</small>
                         </div>
                         <fieldset class="form-group">
@@ -86,7 +141,6 @@ if (!empty($_SESSION['login_username']))
                       <br>
                         <div class="form-group">
                             <label for="exampleInputFile">Gambar Profile Layanan</label>
-                            <!--input type="file"  class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp"  onchange="readURL(this);" -->
                             <input id="fileUpload"  class="form-control-file" multiple="multiple" name="file" type="file"/> 
                             <small id="fileHelp" class="form-text text-muted">Maksimal size 2 Mb.</small>
                         </div>
@@ -96,6 +150,7 @@ if (!empty($_SESSION['login_username']))
                         </div>
                      </div>
                 </div> 
+                <?php } ?>
                 <button type="submit" class="btn btn-general btn-blue mr-2">Submit</button>  
                 <button type="reset" class="btn btn-general btn-white">Cancel</button>
             </form>

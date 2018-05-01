@@ -12,7 +12,7 @@ include '../config/configuration.php';
 <html>
 
 <head>
-    
+    <base href="http://localhost/berkahsantoso/admin/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
@@ -32,6 +32,7 @@ include '../config/configuration.php';
     <!-- Core stylesheets -->
     <link rel="stylesheet" href="css/ui-elements/card.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body> 

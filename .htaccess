@@ -10,7 +10,11 @@ RewriteRule ^admin/access-denied?$ admin/access_denied.html
 RewriteRule ^admin/home?$ admin/index.php
 RewriteRule ^cek_login?$ app/cek_login.php
 RewriteRule ^admin/services?$ admin/services.php
+RewriteRule ^admin/services-form?$ admin/services_form.php
+RewriteRule ^admin/services-form/([0-9]+)/(.*)?$ admin/services_form.php?id=$1&action=$2 
 RewriteRule ^admin/model/services/add-services?$ admin/model/services/add_services.php
+RewriteRule ^admin/model/services/update-services?$ admin/model/services/update_services.php
+RewriteRule ^admin/model/services/delete-services/([0-9]+)/(.*)?$ admin/model/services/delete_services.php?id=$1&judul=$2 [NC,L]
 RewriteRule ^admin/user?$ admin/user.php
 RewriteRule ^admin/model/users/add-user?$ admin/model/users/add_user.php
 RewriteRule ^admin/model/users/delete-user/([0-9]+)/(.*)?$ admin/model/users/delete_user.php?id=$1&username=$2 [NC,L]
