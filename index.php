@@ -3,6 +3,8 @@
 include 'app/header.php';
 include 'config/configuration.php';
 include 'app/log_access.php';
+
+echo "http://".$_SERVER['HTTP_HOST']."/";
 ?>   
 
 <!--====================================================
@@ -89,7 +91,7 @@ include 'app/log_access.php';
             <button class="btn btn-general btn-white" role="button">Contact Us Today</button>
           </div>
           <?php 
-          $sql = "SELECT * FROM  services";
+          $sql = "SELECT * FROM  services where publish = 'ya' limit 2";
           $result = mysqli_query($conn, $sql);
 
           while($row = mysqli_fetch_assoc($result)) {

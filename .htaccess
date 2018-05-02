@@ -19,6 +19,7 @@ RewriteRule ^admin/model/services/delete-services/([0-9]+)/(.*)?$ admin/model/se
 RewriteRule ^admin/user?$ admin/user.php
 RewriteRule ^admin/model/users/add-user?$ admin/model/users/add_user.php
 RewriteRule ^admin/model/users/delete-user/([0-9]+)/(.*)?$ admin/model/users/delete_user.php?id=$1&username=$2 [NC,L]
+RewriteRule ^app/logout?$ app/logout.php
 
 
 

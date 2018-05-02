@@ -12,7 +12,11 @@ include '../config/configuration.php';
 <html>
 
 <head>
-    <base href="<?php echo "http://".$_SERVER['HTTP_HOST']."/admin/" ?>">
+  <?php if($_SERVER['HTTP_HOST'] == 'localhost') { ?>
+    <base href="<?php echo "http://".$_SERVER['HTTP_HOST']."/berkahsantoso/admin/" ?>"> <!-- untuk development -->
+  <?php } else { ?>
+    <base href="<?php echo "http://".$_SERVER['HTTP_HOST']."/admin/" ?>"> <!-- untuk production -->
+  <?php } ?>  
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
@@ -63,49 +67,6 @@ include '../config/configuration.php';
                     </div>
                 </div>
                 <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-                    <!-- Expand-->
-                    <li class="nav-item d-flex align-items-center full_scr_exp"><a class="nav-link" href="#"><img src="img/expand.png" onclick="toggleFullScreen(document.body)" class="img-fluid" alt=""></a></li>
-                    <!-- Search-->
-                    <li class="nav-item d-flex align-items-center"><a id="search" class="nav-link" href="#"><i class="icon-search"></i></a></li>
-                    <!-- Notifications-->
-                    <li class="nav-item dropdown"> 
-                        <a id="notifications" class="nav-link" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell-o"></i><span class="noti-numb-bg"></span><span class="badge">12</span></a>
-                        <ul aria-labelledby="notifications" class="dropdown-menu">
-                            <li>
-                                <a rel="nofollow" href="#" class="dropdown-item nav-link">
-                                    <div class="notification">
-                                        <div class="notification-content"><i class="fa fa-envelope bg-red"></i>You have 6 new messages </div>
-                                        <div class="notification-time"><small>4 minutes ago</small></div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a rel="nofollow" href="#" class="dropdown-item nav-link">
-                                    <div class="notification">
-                                        <div class="notification-content"><i class="fa fa-twitter bg-skyblue"></i>You have 2 followers</div>
-                                        <div class="notification-time"><small>4 minutes ago</small></div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a rel="nofollow" href="#" class="dropdown-item nav-link">
-                                    <div class="notification">
-                                        <div class="notification-content"><i class="fa fa-upload bg-blue"></i>Server Rebooted</div>
-                                        <div class="notification-time"><small>4 minutes ago</small></div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a rel="nofollow" href="#" class="dropdown-item nav-link">
-                                    <div class="notification">
-                                        <div class="notification-content"><i class="fa fa-twitter bg-skyblue"></i>You have 2 followers</div>
-                                        <div class="notification-time"><small>10 minutes ago</small></div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>view all notifications                                            </strong></a></li>
-                        </ul>
-                    </li>
                     <!-- Messages                        -->
                     <li class="nav-item dropdown"> <a id="messages" class="nav-link logout" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-envelope-o"></i><span class="noti-numb-bg"></span><span class="badge">10</span></a>
                         <ul aria-labelledby="messages" class="dropdown-menu">
@@ -148,23 +109,16 @@ include '../config/configuration.php';
                                 <hr>
                             </li>
                             <li>
-                                <a rel="nofollow" href="profile.html" class="dropdown-item">
+                                <a rel="nofollow" href="profile" class="dropdown-item">
                                     <div class="notification">
                                         <div class="notification-content"><i class="fa fa-user "></i>My Profile</div>
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a rel="nofollow" href="profile.html" class="dropdown-item">
+                                <a rel="nofollow" href="email" class="dropdown-item">
                                     <div class="notification">
                                         <div class="notification-content"><i class="fa fa-envelope-o"></i>Inbox</div> 
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a rel="nofollow" href="profile.html" class="dropdown-item">
-                                    <div class="notification">
-                                        <div class="notification-content"><i class="fa fa-cog"></i>Setting</div>
                                     </div>
                                 </a>
                                 <hr>

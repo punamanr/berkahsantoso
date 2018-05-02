@@ -6,7 +6,6 @@ if (!empty($_SESSION['login_username']))
   $status = $_SESSION['login_status'];
   include 'admin_header.php';
   include 'model/services/model_services.php';
-  $menu = "Content";
 ?>
   <!-- Core stylesheets -->
   <link rel="stylesheet" href="css/pages/search.css"> 
