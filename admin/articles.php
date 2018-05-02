@@ -26,7 +26,7 @@ if (!empty($_SESSION['login_username']))
                   <div class="row">
                     <div class="col-md-12">
                       <br>
-                      <a href="articles-form" class="btn float-right btn-sm">Tambah Admin</a>
+                      <a href="articles-form" class="btn float-right btn-sm">Tambah</a>
                       <table class="table table-hover responsive">
                         <thead>
                           <tr>

@@ -9,7 +9,7 @@ $sql = "DELETE FROM services WHERE id=$id";
 
 
 if ($conn->query($sql) === TRUE) { 
-        echo "<script>alert('Account $judul berhasil dihapus!')
+        echo "<script>alert('Jasa $judul berhasil dihapus!')
         location.replace('../../../../../admin/service')</script>";
 } 
 else {

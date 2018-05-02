@@ -22,6 +22,8 @@ RewriteRule ^admin/model/users/delete-user/([0-9]+)/(.*)?$ admin/model/users/del
 RewriteRule ^app/logout?$ app/logout.php
 RewriteRule ^admin/gallery?$ admin/gallery.php
 RewriteRule ^admin/articles?$ admin/articles.php
+RewriteRule ^admin/model/articles/add-articles/?$ admin/model/articles/add_articles.php
+
 RewriteRule ^admin/articles-form/?$ admin/articles_form.php
 RewriteRule ^admin/email?$ admin/email.php
 

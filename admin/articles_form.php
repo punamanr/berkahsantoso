@@ -74,7 +74,7 @@ if (!empty($_SESSION['login_username']))
               /* fetch object array */
               while ($obj = $result->fetch_object()) {
             ?>
-            <form method="post" action="model/services/update-services" enctype="multipart/form-data">
+            <form method="post" action="model/articles/add-articles" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-md-6">
                       <br>
@@ -118,7 +118,7 @@ if (!empty($_SESSION['login_username']))
                 </div> 
                 <?php } }
                 else { ?>
-                <form method="post" action="model/services/add-services" enctype="multipart/form-data">
+                <form method="post" action="model/articles/add-articles" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-md-6">
                       <br>
@@ -128,7 +128,7 @@ if (!empty($_SESSION['login_username']))
                         </div>
                         <div class="form-group">
                             <label for="exampleTextarea">Deskripsi</label>
-                            <textarea class="form-control" id="exampleTextarea" rows="5" name="deskripsi" maxlength="1000"></textarea>
+                            <textarea class="form-control" id="exampleTextarea" rows="5" name="deskripsi" maxlength="1500"></textarea>
                             <small id="fileHelp" class="form-text text-muted">Maksimal 1500 karakter.</small>
                         </div>
                         <div class="form-group">
