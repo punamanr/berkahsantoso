@@ -3,8 +3,6 @@
 include 'app/header.php';
 include 'config/configuration.php';
 include 'app/log_access.php';
-
-echo "http://".$_SERVER['HTTP_HOST']."/";
 ?>   
 
 <!--====================================================
