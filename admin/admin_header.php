@@ -12,10 +12,10 @@ include '../config/configuration.php';
 <html>
 
 <head>
-  <?php if($_SERVER['HTTP_HOST'] == 'localhost') { ?>
-    <base href="<?php echo "http://".$_SERVER['HTTP_HOST']."/berkahsantoso/admin/" ?>"> <!-- untuk development -->
-  <?php } else { ?>
+  <?php if($_SERVER['HTTP_HOST'] <> 'localhost') { ?>
     <base href="<?php echo "http://".$_SERVER['HTTP_HOST']."/admin/" ?>"> <!-- untuk production -->
+  <?php } else { ?>
+    <base href="<?php echo "http://".$_SERVER['HTTP_HOST']."/berkahsantoso/admin/" ?>"> <!-- untuk development -->
   <?php } ?>  
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
