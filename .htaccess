@@ -20,6 +20,11 @@ RewriteRule ^admin/user?$ admin/user.php
 RewriteRule ^admin/model/users/add-user?$ admin/model/users/add_user.php
 RewriteRule ^admin/model/users/delete-user/([0-9]+)/(.*)?$ admin/model/users/delete_user.php?id=$1&username=$2 [NC,L]
 RewriteRule ^app/logout?$ app/logout.php
+RewriteRule ^admin/gallery?$ admin/gallery.php
+RewriteRule ^admin/articles?$ admin/articles.php
+RewriteRule ^admin/articles-form/?$ admin/articles_form.php
+RewriteRule ^admin/email?$ admin/email.php
+
 
 
 
