@@ -138,7 +138,7 @@ include 'app/function_readmore.php';
                 <div class="what-we-desc">
                   <i class="fa fa-shopping-bag"></i>
                   <h6>Warehouse</h6>
-                  <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                  <p class="desc">Pembuatan pondasi tiang pancang untuk warehouse atau gudang. </p>
                 </div>
               </div>
               <div class="col-md-4  col-sm-6">
@@ -158,8 +158,8 @@ include 'app/function_readmore.php';
               <div class="col-md-4  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-hourglass-2"></i>
-                  <h6>Concept</h6>
-                  <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                  <h6>Konsep</h6>
+                  <p class="desc">Konsultasi konsep pembangunan sebelum pengerjaan tiang pancang. </p>
                 </div>
               </div>
               <div class="col-md-4  col-sm-6">
