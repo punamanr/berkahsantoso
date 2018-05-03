@@ -159,12 +159,12 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                               <div>
                                   <button type="submit" class="btn btn-general btn-white">Login</button>
                               </div>
-                              <div>
+                              <!--div>
                                   <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
-                              </div>
+                              </div-->
                           </div>
                       </form>
-                      <form id="register-form" style="display:none;">
+                      <!--form id="register-form" style="display:none;">
                           <h3 class="text-center">Register</h3>
                           <div class="modal-body"> 
                               <label for="username">Username</label> 
@@ -182,7 +182,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                                   <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
                               </div>
                           </div>
-                      </form>
+                      </form-->
                   </div>
               </div>
           </div>
