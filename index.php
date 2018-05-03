@@ -19,11 +19,11 @@ include 'app/function_readmore.php';
               <div class="slide-1"></div>
                 <div class="hero ">
                   <hgroup class="wow fadeInUp">
-                      <h1>JASA <span ><a href="" class="typewrite" data-period="2000" data-type='[ " STRAUSS PILE", " BORED PILE"]'>
+                      <h1>JASA <span ><a href="" class="typewrite" data-period="2000" data-type='[ " STRAUSS PILE", " BORE PILE"]'>
                         <span class="wrap"></span></a></span> </h1>        
                       <h3>Kontruksi tiang pancang untuk Rumah, Gedung, Tower, Apartemen dan lain-lain.</h3>
                   </hgroup>
-                  <a href="contact" class="btn btn-general btn-green wow fadeInUp">Contact Now</a>
+                  <a href="contact" class="btn btn-general btn-green wow fadeInUp">Hubungi Kami</a>
                 </div>           
             </div> 
         </div> 
@@ -39,7 +39,7 @@ include 'app/function_readmore.php';
           <div class="col-md-12">
             <h1 class="wow fadeInUp">Tentang Kami</h1>
             <div class="heading-border"></div>
-            <p class="wow fadeInUp" data-wow-delay="0.4s">Berkah Santoso adalah Jasa Pondasi Perorangan yang bergerak dibidang jasa konstruksi dan sipil khususnya pekerjaan pondasi tiang pancang untuk rumah, gedung-gedung, tower, apartemen dan lain-lain dengan metoda Straus Pile dan Bored Pile. Dengan dukungan oleh Tenaga Ahli yang berpengalaman dan peralatan workshop modern yang lengkap.</p>
+            <p class="wow fadeInUp" data-wow-delay="0.4s">Berkah Santoso adalah Jasa Pondasi Perorangan yang bergerak dibidang jasa konstruksi dan sipil khususnya pekerjaan pondasi tiang pancang untuk rumah, gedung-gedung, tower, apartemen dan lain-lain dengan metoda Straus Pile dan Bore Pile. Dengan dukungan oleh Tenaga Ahli yang berpengalaman dan peralatan workshop modern yang lengkap.</p>
             <!--div class="title-but"><a href="about" class="btn btn-general btn-green">Read More</a></div-->
           </div>
         </div>
@@ -50,29 +50,29 @@ include 'app/function_readmore.php';
           <div class="col-md-3 bg-starship">
             <div class="about-content-box wow fadeInUp" data-wow-delay="0.3s">
               <i class="fa fa-snowflake-o"></i>
-              <h5>Best Quality</h5>
-              <p class="desc">Memberikan kualitas pengerjaan proyek yang terbaik dan hasil yang semaksimal mungkin.</p>
+              <h5>Profesional</h5>
+              <p class="desc">Memberikan kualitas pengerjaan proyek yang terbaik dan hasil yang maksimal. Serta dukungan dari tim ahli yang berpengalaman.</p>
             </div>
           </div> 
           <div class="col-md-3 bg-chathams">
             <div class="about-content-box wow fadeInUp" data-wow-delay="0.5s">
               <i class="fa fa-circle-o-notch"></i>
-              <h5>Best Service</h5>
-              <p class="desc">Kepuasan pelayanan terbaik terhadap pelanggan dimanapun dan kapanpun.</p>
+              <h5>Service Maksimal</h5>
+              <p class="desc">Memberikan pelayanan dan pengerjaan yang terbaik dan cepat untuk kepuasaan pelanggan dengan peralatan yang modern.</p>
             </div>
           </div> 
           <div class="col-md-3 bg-matisse">
             <div class="about-content-box wow fadeInUp" data-wow-delay="0.7s">
               <i class="fa fa-handshake-o"></i>
-              <h5>Best Companion</h5> 
-              <p class="desc">Selalu menjadi mitra terbaik dan terpercaya untuk pelanggan.</p>
+              <h5>Mitra Terbaik</h5> 
+              <p class="desc">Selalu menjadi mitra terbaik dan terpercaya untuk klien ketika dalam pengerjaan proyek maupun setelahnya.</p>
             </div>
           </div> 
           <div class="col-md-3 bg-green-yellow">
             <div class="about-content-box wow fadeInUp" data-wow-delay="0.7s">
               <i class="fa fa-money"></i>
-              <h5>Best Price</h5> 
-              <p class="desc">Harga yang bersahabat dengan hasil maksimal.</p>
+              <h5>Harga Bersahabat</h5> 
+              <p class="desc">Konsultasikan dengan kami untuk mendapatkan penawaran dan harga yang bersahabat.</p>
             </div>
           </div> 
         </div> 
@@ -88,7 +88,7 @@ include 'app/function_readmore.php';
           <div class="col-md-3 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.2s">
             <h2>Layanan Kami</h2>
             <div class="heading-border-light"></div> 
-            <button class="btn btn-general btn-white" role="button">Contact Us Today</button>
+            <a href="contact"><button class="btn btn-general btn-white" role="button">Hubungi Kami</button></a>
           </div>
           <?php 
           $sql = "SELECT * FROM  services where publish = 'ya' limit 2";

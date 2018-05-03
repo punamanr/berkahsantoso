@@ -11,7 +11,7 @@
                 <div class="col-md-3 col-sm-6 ">
                   <div><img src="img/bs-w.png" alt="" class="img-fluid"></div>
                   <ul class="list-unstyled comp-desc-f">
-                     <li><p>Berkahsantoso.com adalah Jasa Pondasi Perorangan yang bergerak dibidang jasa konstruksi dan sipil khususnya pekerjaan pondasi tiang pancang untuk Rumah, gedung-gedung, tower, dan lain-lain dengan metoda Straus Pile dan Bore Pile. </p></li> 
+                     <li><p>Berkah Santoso adalah Jasa Pondasi Perorangan yang bergerak dibidang jasa konstruksi dan sipil khususnya pekerjaan pondasi tiang pancang untuk rumah, gedung-gedung, tower, dan lain-lain dengan metoda Straus Pile dan Bore Pile. </p></li> 
                   </ul><br> 
                 </div>
                 <!-- End About Us -->

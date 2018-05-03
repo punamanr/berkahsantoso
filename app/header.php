@@ -15,7 +15,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Berkah Santoso - Jasa Strauss Pile dan Bored Pile</title>
+    <title>Berkah Santoso - Jasa Strauss Pile dan Bore Pile</title>
     <link rel="shortcut icon" href="img/favicon.ico">
 
     <!-- Global Stylesheets -->
@@ -47,7 +47,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                     <i class="fa fa-envelope"></i> Email: <a href="mailto:info@berkahsantoso.com">info@berkahsantoso.com</a>
                   </li>
                   <li>
-                    <i class="fa fa-phone"></i> Phone: 0857 4024 6283
+                    <i class="fa fa-whatsapp"></i> Phone / WA: 0857 4024 6283
                   </li>
                 </ul>
               </div> 

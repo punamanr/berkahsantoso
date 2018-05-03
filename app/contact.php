@@ -8,7 +8,7 @@ include 'header.php';
 ======================================================-->
     <div id="home" class="home-p pages-head4 text-center">
       <div class="container">
-        <h1 class="wow fadeInUp" data-wow-delay="0.1s">Contact Us</h1>
+        <h1 class="wow fadeInUp" data-wow-delay="0.1s">Kontak</h1>
       </div><!--/end container-->
     </div> 
 
@@ -20,19 +20,18 @@ include 'header.php';
         <div class="row">
           <div class="col-md-8">
             <div class="contact-p1-cont">
-              <h3>Contact our experienced team</h3>
+              <h3>Jangan Sungkan Untuk Hubungi Kami </h3>
               <div class="heading-border-light"></div> 
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model texty.</p>
+              <p>Silahkan hubungi kami untuk diskusi masalah harga ataupun konsultasi pengerjaan kontruksi pondasi tiang pancang. Tim Ahli kami akan siap membantu Anda.</p>
             </div>
           </div>
           <div class="col-md-4"> 
             <div class="contact-p1-cont2"> 
               <address class="address-details-f">
-                25, Dist town Street, Logn <br>
-                California, US <br>
-                Phone: 800 123 3456 <br>
-                Fax: 800 123 3456 <br>
-                Email: <a href="mailto:info@Businessbox.com" class="">info@Businessbox.com</a>
+                Jl. Bona Timur III No 4 <br>
+                Cikokol, Tangerang <br>
+                Phone: 0857 4024 6283 <br>
+                Email: <a href="mailto:info@berkahsantoso.com" class="">info@berkahsantoso.com</a>
               </address>
               <ul class="list-inline social-icon-f top-data">
                 <li><a href="#" target="_empty"><i class="fa top-social fa-facebook" style="height: 35px; width:35px; line-height: 35px;"></i></a></li>
@@ -50,32 +49,29 @@ include 'header.php';
 ======================================================--> 
     <service class="contact-p2" id="contact-p2">
       <div class="container">
+        <form id="login-form" action="add-contact" method="post">
           <div class="row con-form">
             <div class="col-md-4">
-              <input type="text" name="full-name" placeholder="Full Name" class="form-control">
+              <input type="text" name="nama_lengkap" placeholder="Nama Lengkap" class="form-control" required max="50">
             </div>
             <div class="col-md-4">
-              <input type="text" name="email" placeholder="Email Id" class="form-control">
+              <input type="text" name="email" placeholder="Email : example@gmail.com" class="form-control" required>
             </div>
             <div class="col-md-4">
-              <input type="text" name="subject" placeholder="Subject" class="form-control">
+              <input type="text" name="telepon" placeholder="Telepon / Handphone" class="form-control" required maxlength="12">
             </div>
-            <div class="col-md-12"><textarea name="" id=""></textarea></div>
-            <div class="col-md-12 sub-but"><button class="btn btn-general btn-white" role="button">Send</button></div>
+            &nbsp;
+            <div class="col-md-12">
+              <input type="text" name="subject" placeholder="Subject" class="form-control" required maxlength="100">
+            </div>
+            <div class="col-md-12"><textarea name="isi_email" id="" required></textarea></div>
+            <div class="col-md-12 sub-but"><button class="btn btn-general btn-white" type="submit">Send</button></div>
           </div>
+        </form>
       </div>
     </service>
+<br>
 
-<!--====================================================
-                       MAP
-======================================================--> 
-    <section id="contact-add">
-      <div id="map">
-        <div class="map-responsive">
-           <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6030.418742494061!2d-111.34563870463673!3d26.01036670629853!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1471908546569" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
-      </div> 
-    </section>
 
 <?php
 include 'footer.php';

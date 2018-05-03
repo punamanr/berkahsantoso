@@ -25,7 +25,7 @@ RewriteRule ^admin/gallery?$ admin/gallery.php
 RewriteRule ^admin/articles?$ admin/articles.php
 RewriteRule ^admin/model/articles/add-articles/?$ admin/model/articles/add_articles.php
 RewriteRule ^admin/model/articles/delete-article/([0-9]+)/(.*)?$ admin/model/articles/delete_article.php?id=$1&judul=$2 [NC,L]
-
+RewriteRule ^add-contact?$ app/add_contact.php
 
 RewriteRule ^admin/articles-form/?$ admin/articles_form.php
 RewriteRule ^admin/email?$ admin/email.php
