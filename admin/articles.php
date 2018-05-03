@@ -57,7 +57,7 @@ if (!empty($_SESSION['login_username']))
                             <td><?php echo strtoupper($row['updated_at']);?></td>
                             <td>                     
                               <center>
-                                <a href="model/articles/delete-artikel/<?php echo $row['id']?>/<?php echo $row['judul']?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin akan menghapus artikel ini?')">Hapus</a>
+                                <a href="model/articles/delete-article/<?php echo $row['id']?>/<?php echo $row['judul']?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin akan menghapus artikel ini?')">Hapus</a>
                                </center>
                             </td>
                           </tr>

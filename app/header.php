@@ -80,55 +80,12 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                   <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a> 
                   <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="about">About Us</a>
-                    <a class="dropdown-item" href="faq">FAQ</a>
                     <a class="dropdown-item" href="testimonials">Testimonials</a>
                   </div>
                 </li>
                 <li class="nav-item" ><a class="nav-link smooth-scroll" href="services">Jasa</a></li> 
                 <li class="nav-item" ><a class="nav-link smooth-scroll" href="contact">Kontak</a></li> 
-                <li class="nav-item" ><a class="nav-link smooth-scroll" href="contact">Artikel</a></li> 
-                <li class="nav-item dropdown" >
-                  <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a> 
-                  <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="news-list.html">News list layouts</a>
-                    <a class="dropdown-item" href="news-grid.html">News grid layouts</a>
-                    <a class="dropdown-item" href="news-details.html">News Details</a> 
-                    <a class="dropdown-item" href="project.html">Project</a>
-                    <a class="dropdown-item" href="contact">Contact Us</a>
-                    <a class="dropdown-item" href="comming-soon.html">Comming Soon</a>
-                    <a class="dropdown-item" href="pricing.html">Pricing Tables</a>
-                    <a class="dropdown-item" href="admin/404.html">404</a>
-                  </div>
-                </li>
-                <li class="nav-item dropdown" >
-                  <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin Panel</a> 
-                  <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink"> 
-                    <a class="dropdown-item"  target="_empty" href="admin/index.php">Dashboard</a> 
-                    <a class="dropdown-item"  target="_empty" href="admin/chart.html">Charts</a> 
-                    <a class="dropdown-item"  target="_empty" href="admin/email.html">Email</a> 
-                    <a class="dropdown-item"  target="_empty" href="admin/faq.html">FAQ</a> 
-                    <a class="dropdown-item"  target="_empty" href="admin/profile.html">Profile</a> 
-                    <a class="dropdown-item"  target="_empty" href="admin/tables.html">Tables</a> 
-                    <a class="dropdown-item"  target="_empty" href="admin/invoice.html">Invoice</a> 
-                  </div>
-                </li>
-                <!--li class="nav-item dropdown" >
-                  <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a> 
-                  <div class="dropdown-menu dropdown-cust mega-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <div class="row">
-                      <div class="col-md-5">
-                        <a class="dropdown-item" href="shop.html">Shop Detail</a>
-                        <a class="dropdown-item" href="single-product.html">Single Product</a>
-                        <a class="dropdown-item" href="cart.html">Cart</a>
-                        <a class="dropdown-item" href="checkout.html">Checkout</a>
-                        <a class="dropdown-item" href="myaccount.html">Myaccount</a>
-                      </div>
-                      <div class="col-md-7 mega-menu-img m-auto text-center pl-0">
-                        <a href="#"><img src="img/offer_icon.png" alt="" class="img-fluid"></a>
-                      </div>
-                    </div>
-                  </div>
-                </li-->
+                <li class="nav-item" ><a class="nav-link smooth-scroll" href="articles">Artikel</a></li> 
                 <li>
                   <i class="search fa fa-search search-btn"></i>
                   <div class="search-open">

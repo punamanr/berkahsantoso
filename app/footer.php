@@ -21,7 +21,6 @@
                   <div class="heading-footer"><h2>Useful Links</h2></div>
                   <ul class="list-unstyled link-list">
                     <li><a href="about">About us</a><i class="fa fa-angle-right"></i></li> 
-                    <li><a href="faq">FAQ</a><i class="fa fa-angle-right"></i></li> 
                     <li><a href="contact">Contact us</a><i class="fa fa-angle-right"></i></li> 
                   </ul>
                 </div>

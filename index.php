@@ -110,32 +110,6 @@ include 'app/function_readmore.php';
             </div>
           </div> 
           <?php } ?>
-          <!--div class="col-md-4 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.4s">
-            <div class="desc-comp-offer-cont">
-              <div class="thumbnail-blogs">
-                  <div class="caption">
-                    <i class="fa fa-chain"></i>
-                  </div>
-                  <img src="img/news/news-11.jpg" class="img-fluid" alt="...">
-              </div>
-              <h3>Strauss Pile</h3>
-              <p class="desc">Pondasi Strauss Pile adalah pondasi yang dalam cara pembuatannya dikerjakan oleh tenaga manual atau tenaga penggerak mata bornya adalah tenaga manusia. Dengan itu kedalaman dan diameter bor yang dapat dikerjakan sangat terbatas ialah diameter berkisar di 20cm, 25cm, 30cm dan 40cm dengan kedalaman 3 meter s/d 8 meter. </p>
-              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Lanjut...</a>
-            </div>
-          </div>          
-          <div class="col-md-4 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.6s">
-            <div class="desc-comp-offer-cont">
-              <div class="thumbnail-blogs">
-                  <div class="caption">
-                    <i class="fa fa-chain"></i>
-                  </div>
-                  <img src="img/news/news-13.jpg" class="img-fluid" alt="...">
-              </div>              
-              <h3>Bore Pile</h3>
-              <p class="desc">Pondasi Bore Pile hampir sama dengan Strauss Pile. Yang membedakan adalah dalam pelaksaannya, pondasi bore pile dikerjakan dengan mesin Crane. Dengan alat ini dapat dikerjakan pondasi dengan diameter 30cm , 40cm , 50cm dan 60cm kedalaman pondasi mencapai 30 meter. Metode bore pile sering digunakan untuk bangunan lebih dari 3 lantai.</p>
-              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Lanjut...</a>
-            </div>
-          </div-->
         </div>
       </div>
     </section>
@@ -171,14 +145,14 @@ include 'app/function_readmore.php';
                 <div class="what-we-desc">
                   <i class="fa fa-building-o"></i>
                   <h6>Apartemen</h6>
-                  <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                  <p class="desc">Pembuatan kontruksi pondasi tiang pancang untuk pembangunan gedung dan apartemen. </p>
                 </div>
               </div>
               <div class="col-md-4  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-bed"></i>
                   <h6>Hotel</h6>
-                  <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
+                  <p class="desc">Pembuatan kontruksi pondasi tiang pancang untuk Hotel dan Cottage. </p>
                 </div>
               </div>
               <div class="col-md-4  col-sm-6">
@@ -239,135 +213,6 @@ include 'app/function_readmore.php';
           </div>
         </div>  
     </section>
-
-<!--====================================================
-                  COMPANY THOUGHT
-======================================================-->
-    <!--div class="overlay-thought"></div>
-    <section id="thought" class="bg-parallax thought-bg">
-      <div class="container">
-        <div id="thought-desc" class="row title-bar title-bar-thought owl-carousel owl-theme">
-          <div class="col-md-12 ">
-            <div class="heading-border bg-white"></div>
-            <p class="wow fadeInUp" data-wow-delay="0.4s">Businessbox will deliver value to all the stakeholders and will attain excellence and leadership through such delivery of value. We will strive to support the stakeholders in all activities related to us. Businessbox provide great things.</p>
-            <h6>John doe</h6>
-          </div>
-          <div class="col-md-12 thought-desc">
-            <div class="heading-border bg-white"></div>
-            <p class="wow fadeInUp" data-wow-delay="0.4s">Ensuring quality in Businessbox is an obsession and the high quality standards set by us are achieved through a rigorous quality assurance process. Quality assurance is performed by an independent team of trained experts for each project. </p>
-            <h6>Tom John</h6>
-          </div>
-        </div>
-      </div>         
-    </section--> 
-    
-<!--====================================================
-                   SERVICE-HOME
-======================================================--> 
-    <!--section id="service-h">
-        <div class="container-fluid">
-          <div class="row" >
-            <div class="col-md-6" >
-              <div class="service-himg" > 
-                <iframe src="https://www.youtube.com/embed/754f1w90gQU?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </div>
-            <div class="col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-              <div class="service-h-desc">
-                <h3>We are Providing great Services</h3>
-                <div class="heading-border-light"></div> 
-                <p>Businessbox offer the full spectrum of services to help organizations work better. Everything from creating standards of excellence to training your people to work in more effective ways.</p>  
-              <div class="service-h-tab"> 
-                <nav class="nav nav-tabs" id="myTab" role="tablist">
-                  <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-expanded="true">Developing</a>
-                  <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile">Training</a> 
-                  <a class="nav-item nav-link" id="my-profile-tab" data-toggle="tab" href="#my-profile" role="tab" aria-controls="my-profile">Medical</a> 
-                </nav>
-                <div class="tab-content" id="nav-tabContent">
-                  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><p>Nulla est ullamco ut irure incididunt nulla Lorem Lorem minim irure officia enim reprehenderit. Magna duis labore cillum sint adipisicing exercitation ipsum. Nostrud ut anim non exercitation velit laboris fugiat cupidatat. Commodo esse dolore fugiat sint velit ullamco magna consequat voluptate minim amet aliquip ipsum aute. exercitation ipsum. Nostrud ut anim non exercitation velit laboris fugiat cupidatat. Commodo esse dolore fugiat sint velit ullamco magna consequat voluptate minim amet aliquip ipsum aute. </p></div>
-                  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                    <p>Nulla est ullamco ut irure incididunt nulla Lorem Lorem minim irure officia enim reprehenderit. Magna duis labore cillum sint adipisicing exercitation ipsum. Nostrud ut anim non exercitation velit laboris fugiat cupidatat. Commodo esse dolore fugiat sint velit ullamco magna consequat voluptate minim amet aliquip ipsum aute</p>
-                  </div> 
-                  <div class="tab-pane fade" id="my-profile" role="tabpanel" aria-labelledby="my-profile-tab">
-                    <p>Nulla est ullamco ut irure incididunt nulla Lorem Lorem minim irure officia enim reprehenderit. Magna duis labore cillum sint adipisicing exercitation ipsum. Nostrud ut anim non exercitation velit laboris fugiat cupidatat. Commodo esse dolore fugiat sint velit ullamco magna consequat voluptate minim amet aliquip ipsum aute</p>
-                  </div> 
-                </div>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>  
-    </section-->
-
-<!--====================================================
-                      CLIENT
-======================================================-->
-    <!--section id="client" class="client">
-      <div class="container">
-        <div class="row title-bar">
-          <div class="col-md-12">
-            <h1 class="wow fadeInUp">Our Client Say</h1>
-            <div class="heading-border"></div>
-            <p class="wow fadeInUp" data-wow-delay="0.4s">We committed to helping you maintain your Brand Value.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-sm-12">
-            <div class="client-cont wow fadeInUp" data-wow-delay="0.1s">
-              <img src="img/client/avatar-6.jpg" class="img-fluid" alt="">
-              <h5>Leesa len</h5>
-              <h6>DSS CEO & Cofounder</h6>
-              <i class="fa fa-quote-left"></i>
-              <p>The Businessbox service - it helps fill our Business, and increase our show up rate every single time.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="client-cont wow fadeInUp" data-wow-delay="0.3s">
-              <img src="img/client/avatar-2.jpg" class="img-fluid" alt="">
-              <h5>Dec Bol</h5>
-              <h6>TEMS founder</h6>
-              <i class="fa fa-quote-left"></i>
-              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece.</p>
-            </div>
-          </div>
-        </div>
-      </div>        
-    </section-->  
-
-<!--====================================================
-                    CONTACT HOME
-======================================================-->
-    <!--div class="overlay-contact-h"></div>
-    <section id="contact-h" class="bg-parallax contact-h-bg">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="contact-h-cont">
-              <h3 class="cl-white">Continue The Conversation</h3><br>
-              <form>
-                <div class="form-group cl-white">
-                  <label for="name">Your Name</label>
-                  <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name"> 
-                </div>  
-                <div class="form-group cl-white">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> 
-                </div>  
-                <div class="form-group cl-white">
-                  <label for="subject">Subject</label>
-                  <input type="text" class="form-control" id="subject" aria-describedby="subjectHelp" placeholder="Enter subject"> 
-                </div>  
-                <div class="form-group cl-white">
-                  <label for="message">Message</label>
-                  <textarea class="form-control" id="message" rows="3"></textarea>
-                </div>  
-                <button class="btn btn-general btn-white" role="button"><i fa fa-right-arrow></i>GET CONVERSATION</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>         
-    </section--> 
 
 <!--====================================================
                        NEWS
