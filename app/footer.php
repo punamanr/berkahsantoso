@@ -28,7 +28,7 @@
 
                 <!-- Recent Blog Entries -->
                 <div class="col-md-3 col-sm-6 ">
-                  <div class="heading-footer"><h2>Recent Post Entries</h2></div>
+                  <!--div class="heading-footer"><h2>Recent Post Entries</h2></div>
                   <ul class="list-unstyled thumb-list">
                     <li>
                       <div class="overflow-h">
@@ -42,13 +42,13 @@
                         <small>02 OCT, 2017</small>
                       </div>
                     </li>
-                  </ul>
+                  </ul-->
                 </div>
                 <!-- End Recent Blog Entries -->
 
                 <!-- Latest Tweets -->
                 <div class="col-md-3 col-sm-6">
-                  <div class="heading-footer"><h2>Alamat</h2></div>
+                  <div class="heading-footer"><h2>Alamat Kantor</h2></div>
                   <address class="address-details-f">
                     Jl. Bona Timur III No 4 <br>
                     Cikokol, Tangerang <br>

@@ -145,5 +145,5 @@ include 'function_readmore.php';
     </section>
  
 <?php 
-include 'app/footer.php';
+include 'footer.php';
 ?>
