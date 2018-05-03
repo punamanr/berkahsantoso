@@ -175,7 +175,7 @@ include 'app/function_readmore.php';
             <h3>Wilayah Jangkauan Kami</h3>
             <div class="heading-border-light"></div> 
             <p class="desc">Free biaya akomodasi untuk wilayah : <font style="font-weight: bold">Tangerang, Jakarta, Bekasi</font>. 
-            <br/><br/>Untuk daerah lainnya akan dikenakan biaya transportasi sesuai dengan jarak dan kesepakan bersama. Kami siap melayani diseluruh wilayah Indonesia.</p>
+            <br/><br/>Untuk daerah lainnya akan dikenakan biaya transportasi sesuai dengan jarak dan kesepakatan bersama. Kami siap melayani diseluruh wilayah Indonesia.</p>
           </div>
         </div>
       </div>      

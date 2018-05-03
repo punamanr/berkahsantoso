@@ -49,7 +49,7 @@ if (!empty($_SESSION['login_username']))
                           ?>
                           <tr>
                             <th scope="row"><?php echo $no++;?></th>
-                            <td><?php echo $row['judul'];?></td>
+                            <td><?php echo $row['judul'];?><img src="<?php echo $row['url_image'] ?>"></td>
                             <td><?php echo readmore2($row['deskripsi']);?></td>
                             <td><?php echo strtoupper($row['publish']);?></td>
                             <td><?php echo strtoupper($row['sumber_artikel']);?></td>
