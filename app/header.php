@@ -84,8 +84,9 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                     <a class="dropdown-item" href="testimonials">Testimonials</a>
                   </div>
                 </li>
-                <li class="nav-item" ><a class="nav-link smooth-scroll" href="services">Services</a></li> 
-                <li class="nav-item" ><a class="nav-link smooth-scroll" href="contact">Contact Us</a></li> 
+                <li class="nav-item" ><a class="nav-link smooth-scroll" href="services">Jasa</a></li> 
+                <li class="nav-item" ><a class="nav-link smooth-scroll" href="contact">Kontak</a></li> 
+                <li class="nav-item" ><a class="nav-link smooth-scroll" href="contact">Artikel</a></li> 
                 <li class="nav-item dropdown" >
                   <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a> 
                   <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">

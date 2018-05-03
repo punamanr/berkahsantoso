@@ -3,7 +3,9 @@
 include 'app/header.php';
 include 'config/configuration.php';
 include 'app/log_access.php';
+include 'app/function_readmore.php';
 ?>   
+
 
 <!--====================================================
                          HOME
@@ -204,39 +206,19 @@ include 'app/log_access.php';
 ======================================================--> 
     <section id="story">
         <div class="container">
-          <div class="row title-bar">
+          <br>
+          <div class="row">
             <div class="col-md-12">
-              <h1 class="wow fadeInUp">Portofolio</h1>
+              <center><h1 class="wow fadeInUp">Portofolio</h1></center>
               <div class="heading-border"></div> 
             </div>
           </div>
-        </div>  
-        <div class="container-fluid">
-          <div class="row" >
-            <div class="col-md-6" >
-              <div class="story-himg" >
-                <img src="img/image-4.jpg" class="img-fluid" alt="">
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="story-desc">
-                <h3>Kantor Alfamidi DC Surabaya</h3>
-                <div class="heading-border-light"></div> 
-                <p>Pembuatan kontruksi tiang pancang untuk kantor Alfamidi DC Surabaya menggunakan Bored Pile.</p>
-                <!--p class="text-right" style="font-style: italic; font-weight: 700;"><a href="#">PT. Midi Utama Indonesia, Tbk</a></p-->
-                <div class="title-but"><button class="btn btn-general btn-green" role="button">More</button></div>
-              </div>
-            </div>
-          </div>
-        </div>  
-        <div class="container">
           <div class="row">
             <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"> 
               <div class="story-descb">
                   <img src="img/tamansari.jpg" class="img-fluid" alt="...">
                   <h6>The Hill Tamansari Recidence</h6>
                   <p>Jasa kontruksi tiang pancang dengan Bored Pile untuk perumahan The Hill Tamansari Residence di daerah Tembalang, Mangunharjo, Kota Semarang.</p>
-                  <!--a href="#"><i class="fa fa-arrow-circle-o-right"></i> Read More</a-->
               </div>
             </div>
             <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s"> 
@@ -252,7 +234,8 @@ include 'app/log_access.php';
                   <h6>Jababeka Residence</h6>
                   <p>Jasa kontruksi tiang pancang menggunakan Strauss Pile untuk perumahan Jababeka Residence, Cikarang - Bekasi, Jawa Barat.</p>
               </div>
-            </div>                        
+            </div> 
+            <div class="title-but"><button class="btn btn-general btn-green" role="button"> Selengkapnya</button></div>           
           </div>
         </div>  
     </section>
@@ -395,47 +378,28 @@ include 'app/log_access.php';
           <div class="col-md-3 col-sm-6  desc-comp-offer wow fadeInUp" data-wow-delay="0.2s">
             <h2>Artikel Terbaru</h2>
             <div class="heading-border-light"></div> 
-            <button class="btn btn-general btn-green" role="button">See More</button>
+            <button class="btn btn-general btn-green" role="button">Selengkapnya</button>
           </div>
+          <?php 
+          $sql = "SELECT * from articles where publish = 'ya'";
+          $hasil = mysqli_query($conn, $sql);
+
+          while($row = mysqli_fetch_assoc($hasil)) {
+          ?>
           <div class="col-md-3 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.4s">
             <div class="desc-comp-offer-cont">
               <div class="thumbnail-blogs">
                   <div class="caption">
                     <i class="fa fa-chain"></i>
                   </div>
-                  <img src="img/news/news-1.jpg" class="img-fluid" alt="...">
+                  <img src="admin/<?php echo $row['url_image'];?>" class="img-fluid" alt="...">
               </div>
-              <h3>Pricing Strategies for Product</h3>
-              <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from Business box. </p>
+              <h3><?php echo $row['judul']; ?></h3>
+              <p class="desc"><?php echo readmore($row['deskripsi']);?></p>
               <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.6s">
-            <div class="desc-comp-offer-cont">
-              <div class="thumbnail-blogs">
-                  <div class="caption">
-                    <i class="fa fa-chain"></i>
-                  </div>
-                  <img src="img/news/news-9.jpg" class="img-fluid" alt="...">
-              </div>
-              <h3>Design Exhibitions of 2017</h3>
-              <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from Business box. </p>
-              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.8s">
-            <div class="desc-comp-offer-cont">
-              <div class="thumbnail-blogs">
-                  <div class="caption">
-                    <i class="fa fa-chain"></i>
-                  </div>
-                  <img src="img/news/news-12.jpeg" class="img-fluid" alt="...">
-              </div>
-              <h3>Exciting New Technologies</h3>
-              <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from Business box. </p>
-              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
-            </div>
-          </div>
+          <?php } ?>
         </div>
       </div>
     </section>

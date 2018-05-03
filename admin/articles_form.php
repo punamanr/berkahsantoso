@@ -13,7 +13,7 @@ if (!empty($_SESSION['login_username']))
   if($id != '') 
   {
     //echo 'include query';
-    include 'model/services/model_services.php';
+    include 'model/services/model_articles.php';
   }
 ?>
 

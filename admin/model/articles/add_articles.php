@@ -58,11 +58,11 @@ if ($uploadOk == 0) {
         $location = "uploads/articles/".$fileNewName; 
         $sql = "INSERT into articles values ('','$judul','$desc','$location','$publish','$sumber',now(),now())";
         mysqli_query($conn,$sql);
-        echo 'sql query = '.$sql;
-        // $conn->close();
+        // echo 'sql query = '.$sql;
+        $conn->close();
 
-        // echo "<script>alert('Simpan berhasil!')
-        // location.replace('../../articles')</script>";
+        echo "<script>alert('Simpan berhasil!')
+        location.replace('../../articles')</script>";
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
