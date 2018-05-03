@@ -65,7 +65,7 @@ include 'app/function_readmore.php';
             <div class="about-content-box wow fadeInUp" data-wow-delay="0.7s">
               <i class="fa fa-handshake-o"></i>
               <h5>Mitra Terbaik</h5> 
-              <p class="desc">Selalu menjadi mitra terbaik dan terpercaya untuk klien ketika dalam pengerjaan proyek maupun setelahnya.</p>
+              <p class="desc">Selalu menjadi mitra terbaik dan terpercaya dengan mengutamakan pelayanan dan kepuasan pelanggan dimanapun dan kapanpun.</p>
             </div>
           </div> 
           <div class="col-md-3 bg-green-yellow">
@@ -125,44 +125,44 @@ include 'app/function_readmore.php';
             <div class="heading-border-light"></div> 
             <p class="desc">Kami bermitra dengan klien untuk menerapkan rekomendasi terbaik dalam praktik pengerjaan proyek. </p>
           </div>
-          <div class="col-md-9">
+          <div class="col-md-6">
             <div class="row">
-              <div class="col-md-4  col-sm-6">
+              <div class="col-md-6  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-briefcase"></i>
                   <h6>Gedung Kantor</h6>
                   <p class="desc">Pembuatan pondasi tiang pancang perkantoran kecil sampai dengan perkantoran besar.  </p>
                 </div>
               </div>
-              <div class="col-md-4  col-sm-6">
+              <!--div class="col-md-4  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-shopping-bag"></i>
                   <h6>Warehouse</h6>
                   <p class="desc">Pembuatan pondasi tiang pancang untuk warehouse atau gudang. </p>
                 </div>
-              </div>
-              <div class="col-md-4  col-sm-6">
+              </div-->
+              <div class="col-md-6  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-building-o"></i>
                   <h6>Apartemen</h6>
                   <p class="desc">Pembuatan kontruksi pondasi tiang pancang untuk pembangunan gedung dan apartemen. </p>
                 </div>
               </div>
-              <div class="col-md-4  col-sm-6">
+              <!--div class="col-md-4  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-bed"></i>
                   <h6>Hotel</h6>
                   <p class="desc">Pembuatan kontruksi pondasi tiang pancang untuk Hotel dan Cottage. </p>
                 </div>
-              </div>
-              <div class="col-md-4  col-sm-6">
+              </div-->
+              <div class="col-md-6  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-hourglass-2"></i>
                   <h6>Konsep</h6>
                   <p class="desc">Konsultasi konsep pembangunan sebelum pengerjaan tiang pancang. </p>
                 </div>
               </div>
-              <div class="col-md-4  col-sm-6">
+              <div class="col-md-6  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-home"></i>
                   <h6>Perumahan</h6>
@@ -170,6 +170,12 @@ include 'app/function_readmore.php';
                 </div>
               </div>
             </div>
+          </div>
+          <div class="col-md-3">
+            <h3>Wilayah Jangkauan Kami</h3>
+            <div class="heading-border-light"></div> 
+            <p class="desc">Free biaya akomodasi untuk wilayah : <font style="font-weight: bold">Tangerang, Jakarta, Bekasi</font>. 
+            <br/><br/>Untuk daerah lainnya akan dikenakan biaya transportasi sesuai dengan jarak dan kesepakan bersama. Kami siap melayani diseluruh wilayah Indonesia.</p>
           </div>
         </div>
       </div>      
@@ -209,7 +215,9 @@ include 'app/function_readmore.php';
                   <p>Jasa kontruksi tiang pancang menggunakan Strauss Pile untuk perumahan Jababeka Residence, Cikarang - Bekasi, Jawa Barat.</p>
               </div>
             </div> 
-            <div class="title-but"><button class="btn btn-general btn-green" role="button"> Selengkapnya</button></div>           
+            <div class="title-but">
+              <a href="portofolio"><button class="btn btn-general btn-green" role="button"> Selengkapnya</button></a>
+            </div>           
           </div>
         </div>  
     </section>
@@ -223,7 +231,7 @@ include 'app/function_readmore.php';
           <div class="col-md-3 col-sm-6  desc-comp-offer wow fadeInUp" data-wow-delay="0.2s">
             <h2>Artikel Terbaru</h2>
             <div class="heading-border-light"></div> 
-            <button class="btn btn-general btn-green" role="button">Selengkapnya</button>
+            <a href="articles"><button class="btn btn-general btn-green" role="button">Selengkapnya</button></a>
           </div>
           <?php 
           $sql = "SELECT * from articles where publish = 'ya'";

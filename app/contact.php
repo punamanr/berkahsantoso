@@ -1,5 +1,7 @@
 <?php
 include 'header.php';
+include '../config/configuration.php';
+include 'log_access.php';
 ?>      
 <!-- Core Stylesheets -->
 <link rel="stylesheet" href="css/contact.css"> 

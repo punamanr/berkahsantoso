@@ -747,13 +747,14 @@ p {
       } 
 
       .home-p.pages-head1 {
-        background: url(../img/img/banner-1.jpg) no-repeat;
+        /*background: url(../img/img/banner-1.jpg) no-repeat;*/
+        background: url(../img/artikel-desa.jpg) no-repeat;
         background-size: cover;
         background-position: center center;
       }
 
       .home-p.pages-head2 {
-        background: url(../img/img/banner-2.jpg) no-repeat;
+        background: url(../img/home-banner-bg2.jpg) no-repeat;
         background-size: cover;
         background-position: center center;
       } 

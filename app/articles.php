@@ -11,11 +11,16 @@ include 'function_readmore.php';
 ======================================================-->
     <div id="home-p" class="home-p pages-head1 text-center">
       <div class="container">
-        <h1 class="wow fadeInUp" data-wow-delay="0.1s">Businessbox Latest News</h1>
-        <p>Live</p>
+        <h1 class="wow fadeInUp" data-wow-delay="0.1s">Artikel Konstruksi Tiang Pancang</h1>
+        <p>News</p>
       </div><!--/end container-->
     </div> 
+<?php
+$sql = "SELECT *FROM articles where publish = 'ya'";
+$result = mysqli_query($conn, $sql);
 
+
+?>
 <!--====================================================
                         news-p1
 ======================================================--> 
@@ -23,7 +28,22 @@ include 'function_readmore.php';
       <div class="container">
         <div class="row">
           <div class="card-columns">
+            <?php while ($row = mysqli_fetch_object($result)) { ?>
             <div class="card">
+              <div class="desc-comp-offer-cont">
+              <div class="thumbnail-blogs">
+                  <div class="caption">
+                    <i class="fa fa-chain"></i>
+                  </div>
+                  <img src="admin/<?php echo $row->url_image; ?>" class="img-fluid" alt="...">
+              </div>
+              <h3><?php echo $row->judul;?></h3>
+              <p class="desc"><?php echo readmore($row->deskripsi); ?> </p>
+              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
+              </div>
+            </div>
+            <?php } ?>
+            <!--div class="card">
               <div class="desc-comp-offer-cont">
               <div class="thumbnail-blogs">
                   <div class="caption">
@@ -126,7 +146,7 @@ include 'function_readmore.php';
               <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
               </div>
             </div> 
-                        <div class="card">
+            <div class="card">
               <div class="desc-comp-offer-cont">
               <div class="thumbnail-blogs">
                   <div class="caption">
@@ -138,7 +158,7 @@ include 'function_readmore.php';
               <p class="desc">The idea is to incorporate easy steering mechanism and brakes to make turning hand carts easy and arrest slide on inclines. </p>
               <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
               </div>
-            </div>  
+            </div-->  
           </div>
         </div>
       </div>
