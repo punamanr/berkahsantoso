@@ -766,7 +766,13 @@ p {
       }  
 
       .home-p.pages-head4 {
-        background: url(../img/img/banner-4.jpg) no-repeat;
+        background: url(../img/banner-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }  
+
+      .home-p.pages-head5 {
+        background: url(../img/about-us.jpg) no-repeat;
         background-size: cover;
         background-position: center center;
       }  
