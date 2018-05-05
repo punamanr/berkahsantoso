@@ -13,7 +13,7 @@ if (!empty($_SESSION['login_username']))
   if($id != '') 
   {
     //echo 'include query';
-    include 'model/services/model_articles.php';
+    include 'model/articles/model_articles.php';
   }
 ?>
 
@@ -74,7 +74,7 @@ if (!empty($_SESSION['login_username']))
               /* fetch object array */
               while ($obj = $result->fetch_object()) {
             ?>
-            <form method="post" action="model/articles/add-articles" enctype="multipart/form-data">
+            <form method="post" action="model/articles/update-articles" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-md-6">
                       <br>
@@ -112,7 +112,7 @@ if (!empty($_SESSION['login_username']))
                         </div>
                         <div class="form-group">
                             <label for="exampleTextarea">Preview Gambar</label><br>
-                            <div id="image-holder"><img src="<?php echo $obj->url_gambar;?>" class="img-thumbnail"></div>
+                            <div id="image-holder"><img src="<?php echo $obj->url_image;?>" class="img-thumbnail"></div>
                         </div>
                      </div>
                 </div> 
