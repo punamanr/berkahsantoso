@@ -106,13 +106,13 @@ $hasil = mysqli_query($conn,$sql);
                                 </a>
                                 <hr>
                             </li>
-                            <li>
+                            <!--li>
                                 <a rel="nofollow" href="profile" class="dropdown-item">
                                     <div class="notification">
                                         <div class="notification-content"><i class="fa fa-user "></i>My Profile</div>
                                     </div>
                                 </a>
-                            </li>
+                            </li-->
                             <li>
                                 <a rel="nofollow" href="email" class="dropdown-item">
                                     <div class="notification">
