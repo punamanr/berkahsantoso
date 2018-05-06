@@ -6,6 +6,6 @@ session_start();
 if(ISSET($_SESSION['login_username'])) { 
 UNSET($_SESSION['login_username']); 
 } 
-header("location:http://".$_SERVER['HTTP_HOST']."/berkahsantoso/"); 
+header("location:http://".$_SERVER['HTTP_HOST']."/"); 
 session_destroy(); 
 ?>
