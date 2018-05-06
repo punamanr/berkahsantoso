@@ -6,6 +6,14 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 -->
 <?php 
 include '../config/configuration.php';
+
+$sql = "SELECT count(*)total FROM contacts where dibaca = 0";
+$result=mysqli_query($conn,$sql);
+$row=mysqli_fetch_assoc($result);
+
+$sql = "SELECT id,nama_lengkap from contacts where dibaca = 0 limit 3 ";
+$hasil = mysqli_query($conn,$sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -67,35 +75,25 @@ include '../config/configuration.php';
                     </div>
                 </div>
                 <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-                    <!-- Messages                        -->
-                    <li class="nav-item dropdown"> <a id="messages" class="nav-link logout" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-envelope-o"></i><span class="noti-numb-bg"></span><span class="badge">10</span></a>
+                    <!-- Messages -->
+                    <li class="nav-item dropdown"> <a id="messages" class="nav-link logout" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-envelope-o"></i><span <?php if($row['total'] > 0 ) {?>  class="noti-numb-bg" <?php } ?>></span><span class="badge"><?php echo $row['total']; ?></span></a>
+                        <?php 
+                        if ($row['total'] > 0) {
+                        ?>
                         <ul aria-labelledby="messages" class="dropdown-menu">
+                            <?php while ($email = mysqli_fetch_assoc($hasil)) { ?>
                             <li>
                                 <a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                    <div class="msg-profile"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                                    <div class="msg-profile"> <img src="img/user.png" alt="..." class="img-fluid rounded-circle"></div>
                                     <div class="msg-body">
-                                        <h3 class="h5 msg-nav-h3">Jason Doe</h3><span>Sent You Message</span>
+                                        <h3 class="h5 msg-nav-h3"><?php echo $email['nama_lengkap'];?></h3><span>Mengirim Pesan</span>
                                     </div>
                                 </a>
                             </li>
-                            <li>
-                                <a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                    <div class="msg-profile"> <img src="img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                                    <div class="msg-body">
-                                        <h3 class="h5 msg-nav-h3">Frank Williams</h3><span>Sent You Message</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a rel="nofollow" href="#" class="dropdown-item d-flex">
-                                    <div class="msg-profile"> <img src="img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                                    <div class="msg-body">
-                                        <h3 class="h5 msg-nav-h3">Ashley Wood</h3><span>Sent You Message</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>Read all messages    </strong></a></li>
+                            <?php } ?>
+                            <li><a rel="nofollow" href="email" class="dropdown-item all-notifications text-center"> <strong>Read all messages    </strong></a></li>
                         </ul>
+                        <?php } ?>
                     </li> 
                     <li class="nav-item dropdown"><a id="profile" class="nav-link logout" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img//admin-bs.png" alt="..." class="img-fluid rounded-circle" style="height: 30px; width: 30px;"></a>
                         <ul aria-labelledby="profile" class="dropdown-menu profile">

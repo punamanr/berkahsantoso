@@ -181,11 +181,11 @@ if (!empty($_SESSION['login_username']))
                                   }
                                   ?>
                                   <tr>
-                                      <td style="<?php echo $x?>"><a href="email_detail.php"><?php echo $no++;?></a></td>
-                                      <td style="<?php echo $x?>"><a href="email_detail.php"><?php echo $row['nama_lengkap'];?></a></td>
-                                      <td style="<?php echo $x?>"><a href="email_detail.php"><?php echo $row['subject'];?></a></td>
-                                      <td style="<?php echo $x?>"><a href="email_detail.php"><?php echo $row['telepon'];?></a></td>
-                                      <td style="<?php echo $x?>"><a href="email_detail.php"><?php echo $tgl;?></a></td>
+                                      <td style="<?php echo $x?>"><?php echo $no++;?></td>
+                                      <td style="<?php echo $x?>"><?php echo $row['nama_lengkap'];?></td>
+                                      <td style="<?php echo $x?>"><?php echo $row['subject'];?></td>
+                                      <td style="<?php echo $x?>"><?php echo $row['telepon'];?></td>
+                                      <td style="<?php echo $x?>"><?php echo $tgl;?></td>
                                       <td>Hapus</td>
                                   </tr>
                                   <?php } ?>
