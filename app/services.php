@@ -41,94 +41,6 @@ $result = mysqli_query($conn, $sql);
 while($row = mysqli_fetch_assoc($result)) {
 ?> 
 
-      <!--section id="financial-p1" class="bg-parallax financial-p3-bg">
-        <div class="overlay-financial-p1"></div>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-6 financial-p1-pos">
-              <div class="financial-p1-cont">    
-                <a href="#"> <b>Richtech Technology</b></a>  
-                <h3><?php //echo $row['judul']; ?> </h3>
-                <p><?php// echo $row['deskripsi'];?></p>     
-                <button class="btn btn-general btn-white" role="button">Contact Us</button>
-              </div>
-            </div>
-            <div class="col-md-6 financial-p1-emp-img"></div>
-          </div>
-        </div>
-      </section> 
-
-      <section id="financial-p1" class="bg-parallax financial-p3-bg">
-        <div class="overlay-financial-p1"></div>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-6 financial-p1-pos">
-              <div class="financial-p1-cont">    
-                <a href="#"> <b>Richtech Technology</b></a>  
-                <h3>Excellent Strategies For </h3>
-                <p>Businessbox will deliver value to all the stakeholders and will attain excellence and leadership through such delivery of value. We will strive to support the stakeholders in all activities related to us. Businessbox provide great things.Everyone defines success differently – as much as there are people, there are different opinions. Number one in our priority list is the success of our students, alumni and their employers.</p>     
-                <button class="btn btn-general btn-white" role="button">Contact Us</button>
-              </div>
-            </div>
-            <div class="col-md-6 financial-p1-emp-img"></div>
-          </div>
-        </div>
-      </section> 
-      <section id="financial-p1" class="bg-parallax financial-p2-bg">
-        <div class="overlay-financial-p1"></div>
-        <div class="container-fluid">
-          <div class="row"> 
-            <div class="col-md-6 financial-p1-emp-img"></div>
-            <div class="col-md-6 financial-p1-pos financial-p1-emp-desc-d">
-              <div class="financial-p1-cont">    
-                <a href="#"> <b>Richtech Technology</b></a>  
-                <h3>Transfer Financial Services</h3>
-                <p>Businessbox will deliver value to all the stakeholders and will attain excellence and leadership through such delivery of value. We will strive to support the stakeholders in all activities related to us. Businessbox provide great things.Everyone defines success differently – as much as there are people, there are different opinions. Number one in our priority list is the success of our students, alumni and their employers.</p>     
-                <button class="btn btn-general btn-white" role="button">Contact Us</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>  
-
-   
-    <section class="what-we-do bg-gradiant financial-p5">
-      <div class="container">
-        <div class="row title-bar">
-          <div class="col-md-12">
-            <h1 class="wow fadeInUp cl-white">Global Business Services</h1>
-            <div class="heading-border bg-white"></div> 
-          </div>
-        </div>
-        <div class="row"> 
-          <div class="col-md-12">
-            <div class="row">
-              <div class="col-md-4  col-sm-6">
-                <div class="what-we-desc wow fadeInUp" data-wow-delay="0.1s">
-                  <i class="fa fa-bar-chart"></i>
-                  <h6>Professional Growth</h6>
-                  <p class="desc">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                </div>
-              </div>
-              <div class="col-md-4  col-sm-6">
-                <div class="what-we-desc wow fadeInUp" data-wow-delay="0.1s">
-                  <i class="fa fa-bullseye"></i>
-                  <h6>Research &amp; Development </h6>
-                  <p class="desc">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                </div>
-              </div>
-              <div class="col-md-4  col-sm-6">
-                <div class="what-we-desc wow fadeInUp" data-wow-delay="0.1s">
-                  <i class="fa fa-star-o"></i>
-                  <h6>Valuable Services</h6>
-                  <p class="desc">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                </div>
-              </div> 
-            </div>
-          </div>
-        </div>
-      </div>      
-    </section--> 
 
 <!--====================================================
                       FINANCIAL-P6
@@ -222,7 +134,7 @@ while($row = mysqli_fetch_assoc($result)) {
               </div>
               <h3><?php echo $row['judul']; ?></h3>
               <p class="desc"><?php echo readmore($row['deskripsi']);?></p>
-              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
+              <a href="article-details/<?php echo $row['id']?>/<?php echo $row['judul']?>"><i class="fa fa-arrow-circle-o-right"></i> Lanjut baca</a>
             </div>
           </div>
           <?php } ?>

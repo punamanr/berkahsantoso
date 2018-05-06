@@ -1,10 +1,13 @@
 RewriteEngine on
 
-RewriteRule ^home?$ index.php
+RewriteRule ^home/(css|js|img)/(.*)/?$ /$1/$2 [L,QSA,R=301]
+RewriteRule ^home/?$ index.php
 RewriteRule ^contact?$ app/contact.php
 RewriteRule ^about?$ app/about.php
 RewriteRule ^faq?$ app/faq.php
 RewriteRule ^articles?$ app/articles.php
+RewriteRule ^article-details/(css|js|img)/(.*)/?$ /$1/$2 [L,QSA,R=301]
+RewriteRule ^article-details/([0-9]+)/(.*)/?$ app/article_details.php?id=$1&judul=$2
 RewriteRule ^testimonials?$ app/testimonials.php
 RewriteRule ^services?$ app/services.php
 RewriteRule ^admin/access-denied?$ admin/access_denied.html

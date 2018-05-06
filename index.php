@@ -216,7 +216,7 @@ include 'app/function_readmore.php';
               </div>
             </div> 
             <div class="title-but">
-              <a href="portofolio"><button class="btn btn-general btn-green" role="button"> Selengkapnya</button></a>
+              <a href="about"><button class="btn btn-general btn-green" role="button"> Selengkapnya</button></a>
             </div>           
           </div>
         </div>  
@@ -249,7 +249,7 @@ include 'app/function_readmore.php';
               </div>
               <h3><?php echo $row['judul']; ?></h3>
               <p class="desc"><?php echo readmore($row['deskripsi']);?></p>
-              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
+              <a href="article-details/<?php echo $row['id']?>/<?php echo $row['judul']?>"><i class="fa fa-arrow-circle-o-right"></i> Lanjut baca</a>
             </div>
           </div>
           <?php } ?>

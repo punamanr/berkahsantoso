@@ -9,7 +9,11 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 <html lang="en">
 
   <head>
-
+  <?php if($_SERVER['HTTP_HOST'] <> 'localhost') { ?>
+    <base href="<?php echo "http://".$_SERVER['HTTP_HOST']."/admin/" ?>"> <!-- untuk production -->
+  <?php } else { ?>
+    <base href="<?php echo "http://".$_SERVER['HTTP_HOST']."/berkahsantoso/" ?>"> <!-- untuk development -->
+  <?php } ?> 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">

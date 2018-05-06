@@ -4,8 +4,8 @@ include '../config/configuration.php';
 include 'log_access.php';
 include 'function_readmore.php';
 ?>       
-     <!-- Core Stylesheets -->
-    <link rel="stylesheet" href="css/news.css"> 
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/news.css"> 
 <!--====================================================
                        HOME-P
 ======================================================-->
@@ -15,12 +15,7 @@ include 'function_readmore.php';
         <p>News</p>
       </div><!--/end container-->
     </div> 
-<?php
-$sql = "SELECT *FROM articles where publish = 'ya'";
-$result = mysqli_query($conn, $sql);
 
-
-?>
 <!--====================================================
                         news-p1
 ======================================================--> 
@@ -28,141 +23,30 @@ $result = mysqli_query($conn, $sql);
       <div class="container">
         <div class="row">
           <div class="card-columns">
-            <?php while ($row = mysqli_fetch_object($result)) { ?>
+            <?php
+              $sql = "SELECT *FROM articles where publish = 'ya'";
+              $result = mysqli_query($conn, $sql);
+              while ($row = mysqli_fetch_assoc($result)) {
+            ?>
             <div class="card">
               <div class="desc-comp-offer-cont">
               <div class="thumbnail-blogs">
                   <div class="caption">
                     <i class="fa fa-chain"></i>
                   </div>
-                  <img src="admin/<?php echo $row->url_image; ?>" class="img-fluid" alt="...">
+                  <img src="admin/<?php echo $row['url_image'];?>" class="img-fluid" alt="...">
               </div>
-              <h3><?php echo $row->judul;?></h3>
-              <p class="desc"><?php echo readmore($row->deskripsi); ?> </p>
-              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
+              <h3><?php echo $row['judul']?></h3>
+              <p class="desc"><?php echo readmore($row['deskripsi']);?> </p>
+              <a href="article-details/<?php echo $row['id']?>/<?php echo $row['judul']?>"><i class="fa fa-arrow-circle-o-right"></i> Lanjut baca</a>
               </div>
             </div>
             <?php } ?>
-            <!--div class="card">
-              <div class="desc-comp-offer-cont">
-              <div class="thumbnail-blogs">
-                  <div class="caption">
-                    <i class="fa fa-chain"></i>
-                  </div>
-                  <img src="img/news/news-6.jpg" class="img-fluid" alt="...">
-              </div>
-              <h3>Modified hand-cart with steering</h3>
-              <p class="desc">The idea is to incorporate easy steering mechanism and brakes to make turning hand carts easy and arrest slide on inclines. </p>
-              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="desc-comp-offer-cont">
-              <div class="thumbnail-blogs">
-                  <div class="caption">
-                    <i class="fa fa-chain"></i>
-                  </div>
-                  <img src="img/news/news-8.jpg" class="img-fluid" alt="...">
-              </div>
-              <h3>Reduction of AC energy wastage through clamp meter</h3>
-              <p class="desc">Clamp meter connected to an AC monitors the current flow and indicates usage (range) through green, orange and red colour codes. The four friends had learnt about capacitor and its use in many electronic appliances in their physics class. Ageing of these, leads to lesser efficiency of the appliance. </p>
-              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="desc-comp-offer-cont">
-              <div class="thumbnail-blogs">
-                  <div class="caption">
-                    <i class="fa fa-chain"></i>
-                  </div>
-                  <img src="img/news/news-9.jpg" class="img-fluid" alt="...">
-              </div>
-              <h3>Hilly terrain cart</h3>
-              <p class="desc">Three equidistant wheels on a single axle attached to two similar sets in different planes, allowing flexibility in movement with respect to each other. </p>
-              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="desc-comp-offer-cont">
-              <div class="thumbnail-blogs">
-                  <div class="caption">
-                    <i class="fa fa-chain"></i>
-                  </div>
-                  <img src="img/news/news-11.jpg" class="img-fluid" alt="...">
-              </div>
-              <h3>Indicator for dead landline phones</h3>
-              <p class="desc">Contrary to popular </p>
-              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="desc-comp-offer-cont">
-              <div class="thumbnail-blogs">
-                  <div class="caption">
-                    <i class="fa fa-chain"></i>
-                  </div>
-                  <img src="img/news/news-3.jpg" class="img-fluid" alt="...">
-              </div>
-              <h3>Low cost Modern printer</h3>
-              <p class="desc">A dot matrix printer modified at a low cost to work as a Mordern printer </p>
-              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="desc-comp-offer-cont">
-              <div class="thumbnail-blogs">
-                  <div class="caption">
-                    <i class="fa fa-chain"></i>
-                  </div>
-                  <img src="img/news/news-5.jpg" class="img-fluid" alt="...">
-              </div>
-              <h3>Modified hand-cart with steering</h3>
-              <p class="desc">The idea is to incorporate easy steering mechanism and brakes to make turning hand carts easy and arrest slide on inclines. </p>
-              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="desc-comp-offer-cont">
-              <div class="thumbnail-blogs">
-                  <div class="caption">
-                    <i class="fa fa-chain"></i>
-                  </div>
-                  <img src="img/news/news-14.jpg" class="img-fluid" alt="...">
-              </div>
-              <h3>Reduction of AC energy wastage through clamp meter</h3>
-              <p class="desc">Clamp meter connected to an AC monitors the current flow and indicates usage (range) through green, orange and red colour codes. The four friends had learnt about capacitor and its use in many electronic appliances in their physics class. Ageing of these, leads to lesser efficiency of the appliance. </p>
-              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
-              </div>
-            </div>
-            <div class="card">
-              <div class="desc-comp-offer-cont">
-              <div class="thumbnail-blogs">
-                  <div class="caption">
-                    <i class="fa fa-chain"></i>
-                  </div>
-                  <img src="img/news/news-4.jpg" class="img-fluid" alt="...">
-              </div>
-              <h3>Low cost Modern printer</h3>
-              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
-              </div>
-            </div> 
-            <div class="card">
-              <div class="desc-comp-offer-cont">
-              <div class="thumbnail-blogs">
-                  <div class="caption">
-                    <i class="fa fa-chain"></i>
-                  </div>
-                  <img src="img/news/news-7.jpg" class="img-fluid" alt="...">
-              </div>
-              <h3>Modified hand-cart with steering</h3>
-              <p class="desc">The idea is to incorporate easy steering mechanism and brakes to make turning hand carts easy and arrest slide on inclines. </p>
-              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
-              </div>
-            </div-->  
           </div>
         </div>
       </div>
     </section>
+ 
  
 <?php 
 include 'footer.php';
