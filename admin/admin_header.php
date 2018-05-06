@@ -7,11 +7,11 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 <?php 
 include '../config/configuration.php';
 
-$sql = "SELECT count(*)total FROM contacts where dibaca = 0";
+$sql = "SELECT count(*)total FROM contacts where dibaca = 0 and dihapus = 0";
 $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_assoc($result);
 
-$sql = "SELECT id,nama_lengkap from contacts where dibaca = 0 limit 3 ";
+$sql = "SELECT id,nama_lengkap from contacts where dibaca = 0 and dihapus = 0 limit 3 ";
 $hasil = mysqli_query($conn,$sql);
 
 ?>

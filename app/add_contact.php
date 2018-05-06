@@ -9,7 +9,7 @@ $subject = $_POST['subject'];
 $isi_email = $_POST['isi_email'];
 
   $sql = "INSERT into contacts (nama_lengkap, email, telepon, subject, isi_email, dibaca, created_at)
-          values ('$nama','$email','$telp','$subject','$isi_email',0,now())";
+          values ('$nama','$email','$telp','$subject','$isi_email',0,0,now())";
 
   if ($conn->query($sql) === TRUE) { 
       echo "<script>alert('Terima kasih sudah menghubungi kami. Pesan Anda akan kami balas secepatnya.')

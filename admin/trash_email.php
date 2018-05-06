@@ -80,7 +80,7 @@ if (!empty($_SESSION['login_username']))
                             <!-- /.modal -->
                         </div>
                         <ul class="inbox-nav inbox-divider">
-                            <li class="active">
+                            <li>
                                 <a href="email"><i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right"><?php echo $row['total']; ?></span></a>
                             </li>
                             <!--li>
@@ -92,8 +92,8 @@ if (!empty($_SESSION['login_username']))
                             <li>
                                 <a href="#"><i class=" fa fa-external-link"></i> Drafts <span class="label label-info pull-right">30</span></a>
                             </li-->
-                            <li>
-                                <a href="trash-email"><i class=" fa fa-trash-o"></i> Trash</a>
+                            <li class="active">
+                                <a href="#"><i class=" fa fa-trash-o"></i> Trash</a>
                             </li>
                         </ul>  
                     </aside>
@@ -161,13 +161,12 @@ if (!empty($_SESSION['login_username']))
                                       <th style="color: #778899;">Subyek</th>
                                       <th style="color: #778899;">Telepon</th>
                                       <th style="color: #778899;">Tanggal</th>
-                                      <th></th>
                                   </tr>
                               </thead>
                               <tbody>
                                   <?php 
                                   $no = 1;
-                                  $sql = "SELECT *from contacts where dihapus = 0 order by dibaca";
+                                  $sql = "SELECT *from contacts where dihapus = 1 order by dibaca";
                                   $result = mysqli_query($conn,$sql);
                                   while ($row = mysqli_fetch_assoc($result)) {
                                   $tgl = $row['created_at'];
@@ -186,7 +185,6 @@ if (!empty($_SESSION['login_username']))
                                       <td style="<?php echo $x?>"><a href="email-detail/<?php echo $row['id']; ?>"><?php echo $row['subject'];?></a></td>
                                       <td style="<?php echo $x?>"><a href="email-detail/<?php echo $row['id']; ?>"><?php echo $row['telepon'];?></a></td>
                                       <td style="<?php echo $x?>"><a href="email-detail/<?php echo $row['id']; ?>"><?php echo $tgl;?></a></td>
-                                      <td><a href="model/contacts/delete-contact/<?php echo $row['id']?>/<?php echo $row['nama_lengkap']?>" class="btn btn-sm btn-danger"> Hapus </a></td>
                                   </tr>
                                   <?php } ?>
                               </tbody>
@@ -197,7 +195,6 @@ if (!empty($_SESSION['login_username']))
                                       <th style="color: #778899;">Subyek</th>
                                       <th style="color: #778899;">Telepon</th>
                                       <th style="color: #778899;">Tanggal</th>
-                                      <th></th>
                                   </tr>
                               </tfoot>
                           </table>

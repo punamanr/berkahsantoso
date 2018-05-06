@@ -95,7 +95,7 @@ if (!empty($_SESSION['login_username']))
                             <li class="active">
                                 <a href="email"><i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right"><?php echo $row['total']; ?></span></a>
                             </li>
-                            <li>
+                            <!--li>
                                 <a href="#"><i class="fa fa-envelope-o"></i> Sent Mail</a>
                             </li>
                             <li>
@@ -103,9 +103,9 @@ if (!empty($_SESSION['login_username']))
                             </li>
                             <li>
                                 <a href="#"><i class=" fa fa-external-link"></i> Drafts <span class="label label-info pull-right">30</span></a>
-                            </li>
+                            </li-->
                             <li>
-                                <a href="#"><i class=" fa fa-trash-o"></i> Trash</a>
+                                <a href="trash-email"><i class=" fa fa-trash-o"></i> Trash</a>
                             </li>
                         </ul>  
                     </aside>
