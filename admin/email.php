@@ -26,7 +26,7 @@ if (!empty($_SESSION['login_username']))
                         <div class="inbox-body">
                             <!--a href="#myModal" data-toggle="modal" title="Compose" class="btn btn-compose"> Compose </a-->
                             <!-- Modal -->
-                            <h2>EMAIL</h2>
+                            <h2>Email</h2>
                             <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade" style="display: none;">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -81,7 +81,7 @@ if (!empty($_SESSION['login_username']))
                         </div>
                         <ul class="inbox-nav inbox-divider">
                             <li class="active">
-                                <a href="#"><i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right">2</span></a>
+                                <a href="email"><i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right"><?php echo $row['total']; ?></span></a>
                             </li>
                             <li>
                                 <a href="#"><i class="fa fa-envelope-o"></i> Sent Mail</a>
@@ -181,11 +181,11 @@ if (!empty($_SESSION['login_username']))
                                   }
                                   ?>
                                   <tr>
-                                      <td style="<?php echo $x?>"><a href="email_detail.php"><?php echo $no++;?></a></td>
-                                      <td style="<?php echo $x?>"><a href="email_detail.php"><?php echo $row['nama_lengkap'];?></a></td>
-                                      <td style="<?php echo $x?>"><a href="email_detail.php"><?php echo $row['subject'];?></a></td>
-                                      <td style="<?php echo $x?>"><a href="email_detail.php"><?php echo $row['telepon'];?></a></td>
-                                      <td style="<?php echo $x?>"><a href="email_detail.php"><?php echo $tgl;?></a></td>
+                                      <td style="<?php echo $x?>"><a href="email-detail/<?php echo $row['id']; ?>"><?php echo $no++;?></a></td>
+                                      <td style="<?php echo $x?>"><a href="email-detail/<?php echo $row['id']; ?>"><?php echo $row['nama_lengkap'];?></a></td>
+                                      <td style="<?php echo $x?>"><a href="email-detail/<?php echo $row['id']; ?>"><?php echo $row['subject'];?></a></td>
+                                      <td style="<?php echo $x?>"><a href="email-detail/<?php echo $row['id']; ?>"><?php echo $row['telepon'];?></a></td>
+                                      <td style="<?php echo $x?>"><a href="email-detail/<?php echo $row['id']; ?>"><?php echo $tgl;?></a></td>
                                       <td>Hapus</td>
                                   </tr>
                                   <?php } ?>

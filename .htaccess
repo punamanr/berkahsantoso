@@ -34,6 +34,7 @@ RewriteRule ^admin/model/articles/update-articles/?$ admin/model/articles/update
 RewriteRule ^admin/model/articles/delete-article/([0-9]+)/(.*)?$ admin/model/articles/delete_article.php?id=$1&judul=$2 [NC,L]
 RewriteRule ^add-contact?$ app/add_contact.php
 RewriteRule ^admin/email?$ admin/email.php
+RewriteRule ^admin/email-detail/([0-9]+)/?$ admin/email_detail.php?id=$1 
 
 
 

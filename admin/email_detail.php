@@ -5,6 +5,18 @@ if (!empty($_SESSION['login_username']))
   $user = $_SESSION['login_username'];
   $status = $_SESSION['login_status'];
   include 'admin_header.php';
+  $id = $_GET['id'];
+
+  $sql2 = "SELECT *from contacts where id = $id";
+  $result2 = mysqli_query($conn,$sql2);
+  $row2 = mysqli_fetch_assoc($result2);
+
+  if($row2['dibaca'] == 0) 
+  {
+   mysqli_query($conn,"UPDATE contacts
+                set dibaca = 1
+                where id = $id");
+  }
 ?>
 <!-- Core stylesheets -->
 <link rel="stylesheet" href="css/apps/email.css">
@@ -26,7 +38,7 @@ if (!empty($_SESSION['login_username']))
                         <div class="inbox-body">
                             <!--a href="#myModal" data-toggle="modal" title="Compose" class="btn btn-compose"> Compose </a-->
                             <!-- Modal -->
-                            <h2>EMAIL</h2>
+                            <h2>Email</h2>
                             <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade" style="display: none;">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -81,7 +93,7 @@ if (!empty($_SESSION['login_username']))
                         </div>
                         <ul class="inbox-nav inbox-divider">
                             <li class="active">
-                                <a href="#"><i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right">2</span></a>
+                                <a href="email"><i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right"><?php echo $row['total']; ?></span></a>
                             </li>
                             <li>
                                 <a href="#"><i class="fa fa-envelope-o"></i> Sent Mail</a>
@@ -153,54 +165,38 @@ if (!empty($_SESSION['login_username']))
                                 </ul>
                             </div-->
                             <br>
-                            <table class="table table-inbox table-hover" style="width:100%">
-                              <thead>
-                                  <tr>
-                                      <th style="color: #778899;">#</th>
-                                      <th style="color: #778899;">Nama</th>
-                                      <th style="color: #778899;">Subyek</th>
-                                      <th style="color: #778899;">Telepon</th>
-                                      <th style="color: #778899;">Tanggal</th>
-                                      <th></th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                  <?php 
-                                  $no = 1;
-                                  $sql = "SELECT *from contacts order by dibaca";
-                                  $result = mysqli_query($conn,$sql);
-                                  while ($row = mysqli_fetch_assoc($result)) {
-                                  $tgl = $row['created_at'];
-                                  $tgl = date( "d/m/Y", strtotime($tgl));
-
-                                  if($row['dibaca'] == 0){
-                                    $x = "font-weight: bold";
-                                  }
-                                  else {
-                                    $x = "";
-                                  }
-                                  ?>
-                                  <tr>
-                                      <td style="<?php echo $x?>"><?php echo $no++;?></td>
-                                      <td style="<?php echo $x?>"><?php echo $row['nama_lengkap'];?></td>
-                                      <td style="<?php echo $x?>"><?php echo $row['subject'];?></td>
-                                      <td style="<?php echo $x?>"><?php echo $row['telepon'];?></td>
-                                      <td style="<?php echo $x?>"><?php echo $tgl;?></td>
-                                      <td>Hapus</td>
-                                  </tr>
-                                  <?php } ?>
-                              </tbody>
-                              <tfoot>
-                                  <tr>
-                                      <th style="color: #778899;">#</th>
-                                      <th style="color: #778899;">Nama</th>
-                                      <th style="color: #778899;">Subyek</th>
-                                      <th style="color: #778899;">Telepon</th>
-                                      <th style="color: #778899;">Tanggal</th>
-                                      <th></th>
-                                  </tr>
-                              </tfoot>
-                          </table>
+                            <!--***** FORM VALIDATION *****-->
+                            <div class="card form" id="form3">
+                                <div class="card-header">
+                                    <h3>Detail Kontak</h3>
+                                </div>
+                                <br>
+                                    <div class="form-group row">
+                                        <label for="inputHorizontalSuccess" class="col-sm-2 col-form-label">Nama</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" readonly id="inputHorizontalSuccess" value="<?php echo $row2['nama_lengkap'];?>">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row ">
+                                        <label for="inputHorizontalWarning" class="col-sm-2 col-form-label">Email</label>
+                                        <div class="col-sm-10">
+                                            <input type="email" class="form-control" readonly id="inputHorizontalWarning" value="<?php echo $row2['email'];?>">
+                                        </div>
+                                    </div> 
+                                    <div class="form-group row ">
+                                        <label for="inputHorizontalWarning" class="col-sm-2 col-form-label">Telepon</label>
+                                        <div class="col-sm-10">
+                                            <input type="email" class="form-control" readonly id="inputHorizontalWarning" value="<?php echo $row2['telepon'];?>">
+                                        </div>
+                                    </div> 
+                                    <div class="form-group row ">
+                                        <label for="inputHorizontalWarning" class="col-sm-2 col-form-label">Email</label>
+                                        <div class="col-sm-10">
+                                            <textarea class="form-control" rows="6" readonly><?php echo $row2['isi_email']?></textarea>
+                                        </div>
+                                    </div> 
+                                <hr> 
+                            </div>
                         </div>
                     </aside>
                 </div>
