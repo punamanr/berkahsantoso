@@ -10,7 +10,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 
   <head>
   <?php if($_SERVER['HTTP_HOST'] <> 'localhost') { ?>
-    <base href="<?php echo "http://".$_SERVER['HTTP_HOST']."/admin/" ?>"> <!-- untuk production -->
+    <base href="<?php echo "http://".$_SERVER['HTTP_HOST']."/" ?>"> <!-- untuk production -->
   <?php } else { ?>
     <base href="<?php echo "http://".$_SERVER['HTTP_HOST']."/berkahsantoso/" ?>"> <!-- untuk development -->
   <?php } ?> 
@@ -80,13 +80,6 @@ License URL: https://creativecommons.org/licenses/by/4.0/
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item" ><a class="nav-link smooth-scroll" href="home">Home</a></li>
-                <!--li class="nav-item dropdown" >
-                  <a class="nav-link dropdown-toggle smooth-scroll" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a> 
-                  <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="about">About Us</a>
-                    <a class="dropdown-item" href="testimonials">Testimonials</a>
-                  </div>
-                </li-->
                 <li class="nav-item" ><a class="nav-link smooth-scroll" href="about">Tentang Kami</a></li> 
                 <li class="nav-item" ><a class="nav-link smooth-scroll" href="services">Jasa & Layanan Kami</a></li> 
                 <li class="nav-item" ><a class="nav-link smooth-scroll" href="contact">Kontak</a></li> 
@@ -164,30 +157,8 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                               <div>
                                   <button type="submit" class="btn btn-general btn-white">Login</button>
                               </div>
-                              <!--div>
-                                  <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
-                              </div-->
                           </div>
                       </form>
-                      <!--form id="register-form" style="display:none;">
-                          <h3 class="text-center">Register</h3>
-                          <div class="modal-body"> 
-                              <label for="username">Username</label> 
-                              <input id="register_username" class="form-control" type="text" placeholder="Enter username" required>
-                              <label for="register_email">E-mailId</label> 
-                              <input id="register_email" class="form-control" type="text" placeholder="Enter eMail" required>
-                              <label for="register_password">Password</label> 
-                              <input id="register_password" class="form-control" type="password" placeholder="Password" required>
-                          </div>
-                          <div class="modal-footer">
-                              <div>
-                                  <button type="submit" class="btn btn-general btn-white">Register</button>
-                              </div>
-                              <div>
-                                  <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
-                              </div>
-                          </div>
-                      </form-->
                   </div>
               </div>
           </div>
