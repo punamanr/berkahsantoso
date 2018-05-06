@@ -5,6 +5,9 @@ if (!empty($_SESSION['login_username']))
   $user = $_SESSION['login_username'];
   $status = $_SESSION['login_status'];
   include 'admin_header.php';
+  $sql = "SELECT *from contacts where dihapus = 0 order by dibaca";
+  $result = mysqli_query($conn,$sql);
+  $total = mysqli_num_rows($result);
 ?>
 <!-- Core stylesheets -->
 <link rel="stylesheet" href="css/apps/email.css">
@@ -81,7 +84,7 @@ if (!empty($_SESSION['login_username']))
                         </div>
                         <ul class="inbox-nav inbox-divider">
                             <li class="active">
-                                <a href="email"><i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right"><?php echo $row['total']; ?></span></a>
+                                <a href="email"><i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right"><?php echo $total; ?></span></a>
                             </li>
                             <!--li>
                                 <a href="#"><i class="fa fa-envelope-o"></i> Sent Mail</a>
@@ -167,8 +170,6 @@ if (!empty($_SESSION['login_username']))
                               <tbody>
                                   <?php 
                                   $no = 1;
-                                  $sql = "SELECT *from contacts where dihapus = 0 order by dibaca";
-                                  $result = mysqli_query($conn,$sql);
                                   while ($row = mysqli_fetch_assoc($result)) {
                                   $tgl = $row['created_at'];
                                   $tgl = date( "d/m/Y", strtotime($tgl));
@@ -181,11 +182,11 @@ if (!empty($_SESSION['login_username']))
                                   }
                                   ?>
                                   <tr>
-                                      <td style="<?php echo $x?>"><a href="email-detail/<?php echo $row['id']; ?>"><?php echo $no++;?></a></td>
-                                      <td style="<?php echo $x?>"><a href="email-detail/<?php echo $row['id']; ?>"><?php echo $row['nama_lengkap'];?></a></td>
-                                      <td style="<?php echo $x?>"><a href="email-detail/<?php echo $row['id']; ?>"><?php echo $row['subject'];?></a></td>
-                                      <td style="<?php echo $x?>"><a href="email-detail/<?php echo $row['id']; ?>"><?php echo $row['telepon'];?></a></td>
-                                      <td style="<?php echo $x?>"><a href="email-detail/<?php echo $row['id']; ?>"><?php echo $tgl;?></a></td>
+                                      <td style="<?php echo $x?>"><a href="email-detail/<?php echo $row['id']; ?>/<?php echo $total; ?>"><?php echo $no++;?></a></td>
+                                      <td style="<?php echo $x?>"><a href="email-detail/<?php echo $row['id']; ?>/<?php echo $total; ?>"><?php echo $row['nama_lengkap'];?></a></td>
+                                      <td style="<?php echo $x?>"><a href="email-detail/<?php echo $row['id']; ?>/<?php echo $total; ?>"><?php echo $row['subject'];?></a></td>
+                                      <td style="<?php echo $x?>"><a href="email-detail/<?php echo $row['id']; ?>/<?php echo $total; ?>"><?php echo $row['telepon'];?></a></td>
+                                      <td style="<?php echo $x?>"><a href="email-detail/<?php echo $row['id']; ?>/<?php echo $total; ?>"><?php echo $tgl;?></a></td>
                                       <td><a href="model/contacts/delete-contact/<?php echo $row['id']?>/<?php echo $row['nama_lengkap']?>" class="btn btn-sm btn-danger"> Hapus </a></td>
                                   </tr>
                                   <?php } ?>

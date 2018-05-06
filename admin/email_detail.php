@@ -6,6 +6,7 @@ if (!empty($_SESSION['login_username']))
   $status = $_SESSION['login_status'];
   include 'admin_header.php';
   $id = $_GET['id'];
+  $total = $_GET['total'];
 
   $sql2 = "SELECT *from contacts where id = $id";
   $result2 = mysqli_query($conn,$sql2);
@@ -93,7 +94,7 @@ if (!empty($_SESSION['login_username']))
                         </div>
                         <ul class="inbox-nav inbox-divider">
                             <li class="active">
-                                <a href="email"><i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right"><?php echo $row['total']; ?></span></a>
+                                <a href="email"><i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right"><?php echo $total; ?></span></a>
                             </li>
                             <!--li>
                                 <a href="#"><i class="fa fa-envelope-o"></i> Sent Mail</a>
