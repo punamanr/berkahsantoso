@@ -59,7 +59,7 @@ while($row = mysqli_fetch_assoc($result)) {
                 <h2 class="wow fadeInUp"><?php echo $row['judul'];?> </h2>
                 <div class="heading-border-light"></div>
                 <p> <?php echo $row['deskripsi'];?> </p>
-                <button class="btn btn-general btn-white" role="button">Hubungi Kami</button>
+                <a href="contact"><button class="btn btn-general btn-white" role="button">Hubungi Kami</button></a>
               </div>
             </div>
           </div>

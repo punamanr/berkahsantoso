@@ -106,7 +106,7 @@ include 'app/function_readmore.php';
               </div>
               <h3><?php echo $row['judul']; ?></h3>
               <p style="text-align: justify; text-indent: 0.3in;" class="desc"><?php echo $row['deskripsi'];?> </p>
-              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Lanjut...</a>
+              <a href="services"><i class="fa fa-arrow-circle-o-right"></i> Lanjut baca</a>
             </div>
           </div> 
           <?php } ?>

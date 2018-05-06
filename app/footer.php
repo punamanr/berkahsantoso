@@ -20,8 +20,8 @@
                 <div class="col-md-3 col-sm-6 ">
                   <div class="heading-footer"><h2>Useful Links</h2></div>
                   <ul class="list-unstyled link-list">
-                    <li><a href="about">About us</a><i class="fa fa-angle-right"></i></li> 
-                    <li><a href="contact">Contact us</a><i class="fa fa-angle-right"></i></li> 
+                    <li><a href="about">Tentang Kita</a><i class="fa fa-angle-right"></i></li> 
+                    <li><a href="contact">Kontak</a><i class="fa fa-angle-right"></i></li> 
                   </ul>
                 </div>
                 <!-- End Recent list -->
@@ -52,7 +52,7 @@
                   <address class="address-details-f">
                     Jl. Bona Timur III No 4 <br>
                     Cikokol, Tangerang <br>
-                    Phone: 0857 4024 6283 <br>
+                    Phone: 0857 4024 6283 <a href=""><i class="fa top-social fa-whatsapp"></i></a> <br>
                     Email: <a href="mailto:info@berkahsantoso.com" class="">info@berkahsantoso.com</a>
                   </address>   
                   <ul class="list-inline social-icon-f top-data">
