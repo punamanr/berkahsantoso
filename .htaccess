@@ -37,6 +37,7 @@ RewriteRule ^admin/email?$ admin/email.php
 RewriteRule ^admin/email-detail/([0-9]+)/([0-9]+)/?$ admin/email_detail.php?id=$1&total=$2
 RewriteRule ^admin/model/contacts/delete-contact/([0-9]+)/(.*)?$ admin/model/contacts/delete_contact.php?id=$1&nama=$2 [NC,L]
 RewriteRule ^admin/trash-email?$ admin/trash_email.php
+RewriteRule ^admin/portofolios?$ admin/portofolios.php
 
 
 
