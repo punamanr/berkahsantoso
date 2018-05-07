@@ -28,7 +28,7 @@ if (!empty($_SESSION['login_username']))
                   <div class="row">
                     <div class="col-md-12">
                       <br>
-                      <a href="articles-form" class="btn float-right btn-sm">Tambah</a>
+                      <a href="articles-form" class="btn btn-info float-right btn-sm">Tambah</a>
                       <table class="table table-hover responsive">
                         <thead>
                           <tr>
@@ -49,8 +49,8 @@ if (!empty($_SESSION['login_username']))
                           ?>
                           <tr>
                             <th scope="row"><?php echo $no++;?></th>
-                            <td><?php echo $row['judul'];?><img src="<?php echo $row['url_image'] ?>"></td>
-                            <td><?php echo readmore2($row['deskripsi']);?></td>
+                            <td><?php echo $row['judul'];?><!--img src="<?php // echo $row['url_image'] ?>"--></td>
+                            <td><?php echo readmore($row['deskripsi']);?></td>
                             <td><?php echo strtoupper($row['publish']);?></td>
                             <td><?php echo strtoupper($row['sumber_artikel']);?></td>
                             <td><?php echo strtoupper($row['created_at']);?></td>
