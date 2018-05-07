@@ -20,7 +20,7 @@
                 <div class="col-md-3 col-sm-6 ">
                   <div class="heading-footer"><h2>Useful Links</h2></div>
                   <ul class="list-unstyled link-list">
-                    <li><a href="about">Tentang Kita</a><i class="fa fa-angle-right"></i></li> 
+                    <li><a href="about">Tentang Kami</a><i class="fa fa-angle-right"></i></li> 
                     <li><a href="contact">Kontak</a><i class="fa fa-angle-right"></i></li> 
                   </ul>
                 </div>

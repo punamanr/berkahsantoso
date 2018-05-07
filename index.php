@@ -134,13 +134,6 @@ include 'app/function_readmore.php';
                   <p class="desc">Pembuatan pondasi tiang pancang perkantoran kecil sampai dengan perkantoran besar.  </p>
                 </div>
               </div>
-              <!--div class="col-md-4  col-sm-6">
-                <div class="what-we-desc">
-                  <i class="fa fa-shopping-bag"></i>
-                  <h6>Warehouse</h6>
-                  <p class="desc">Pembuatan pondasi tiang pancang untuk warehouse atau gudang. </p>
-                </div>
-              </div-->
               <div class="col-md-6  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-building-o"></i>
@@ -148,13 +141,6 @@ include 'app/function_readmore.php';
                   <p class="desc">Pembuatan kontruksi pondasi tiang pancang untuk pembangunan gedung dan apartemen. </p>
                 </div>
               </div>
-              <!--div class="col-md-4  col-sm-6">
-                <div class="what-we-desc">
-                  <i class="fa fa-bed"></i>
-                  <h6>Hotel</h6>
-                  <p class="desc">Pembuatan kontruksi pondasi tiang pancang untuk Hotel dan Cottage. </p>
-                </div>
-              </div-->
               <div class="col-md-6  col-sm-6">
                 <div class="what-we-desc">
                   <i class="fa fa-hourglass-2"></i>
@@ -194,27 +180,21 @@ include 'app/function_readmore.php';
             </div>
           </div>
           <div class="row">
+            <?php
+            $sql = "SELECT *from portofolios limit 3";
+            $result = mysqli_query($conn,$sql);
+
+            while ($row = mysqli_fetch_assoc($result)) {
+            ?>
             <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"> 
               <div class="story-descb">
-                  <img src="img/tamansari.jpg" class="img-fluid" alt="...">
-                  <h6>The Hill Tamansari Recidence</h6>
-                  <p>Jasa kontruksi tiang pancang dengan Bored Pile untuk perumahan The Hill Tamansari Residence di daerah Tembalang, Mangunharjo, Kota Semarang.</p>
+                  <img src="admin/<?php echo $row['url_image'];?>" class="img-fluid" alt="...">
+                  <h6><?php echo $row['tempat'];?></h6>
+                  <p><?php echo $row['deskripsi'];?></p>
+                  <p class="text-right" style="font-style: italic; font-weight: 700;"><a href="#"><?php echo $row['jasa_layanan']?></a></p>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s"> 
-              <div class="story-descb">
-                  <img src="img/chalcedony.jpg" class="img-fluid" alt="...">
-                  <h6>Chalcedony Residence</h6>
-                  <p>Jasa kontruksi tiang pancang dengan Bored Pile untuk perumahan Summarecon Serpong Cluster Chalcedony Residence, Tangerang - Banten.</p>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s"> 
-              <div class="story-descb">
-                  <img src="img/jababeka.jpg" class="img-fluid" alt="...">
-                  <h6>Jababeka Residence</h6>
-                  <p>Jasa kontruksi tiang pancang menggunakan Strauss Pile untuk perumahan Jababeka Residence, Cikarang - Bekasi, Jawa Barat.</p>
-              </div>
-            </div> 
+            <?php } ?> 
             <div class="title-but">
               <a href="about"><button class="btn btn-general btn-green" role="button"> Selengkapnya</button></a>
             </div>           

@@ -38,6 +38,15 @@ RewriteRule ^admin/email-detail/([0-9]+)/([0-9]+)/?$ admin/email_detail.php?id=$
 RewriteRule ^admin/model/contacts/delete-contact/([0-9]+)/(.*)?$ admin/model/contacts/delete_contact.php?id=$1&nama=$2 [NC,L]
 RewriteRule ^admin/trash-email?$ admin/trash_email.php
 RewriteRule ^admin/portofolios?$ admin/portofolios.php
+RewriteRule ^admin/portofolios-form?$ admin/portofolios_form.php
+RewriteRule ^admin/portofolios-form/([0-9]+)/(.*)/?$ admin/portofolios_form.php?id=$1&action=$2 
+RewriteRule ^admin/model/portofolios/add-portofolios/?$ admin/model/portofolios/add_portofolios.php
+RewriteRule ^admin/model/portofolios/delete-portofolios/([0-9]+)/(.*)?$ admin/model/portofolios/delete_portofolios.php?id=$1&tempat=$2 [NC,L]
+RewriteRule ^admin/model/portofolios/update-portofolios/?$ admin/model/portofolios/update_portofolios.php
+
+
+
+
 
 
 

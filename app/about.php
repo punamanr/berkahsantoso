@@ -47,34 +47,22 @@ include 'header.php';
                     <!--button class="btn btn-general btn-green" role="button">See More</button-->
                 </div>
                 <div class="row">
-                  <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"> 
-                    <div class="story-descb">
-                        <img src="img/tamansari.jpg" class="img-fluid" alt="...">
-                        <h6>The Hill Tamansari Recidence</h6>
-                        <p>Jasa kontruksi tiang pancang dengan Bored Pile untuk perumahan The Hill Tamansari Residence di daerah Tembalang, Mangunharjo, Kota Semarang.</p>
-                    </div>
+                <?php
+                include '../config/configuration.php';
+                $sql = "SELECT *from portofolios";
+                $result = mysqli_query($conn,$sql);
+
+                while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+                <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"> 
+                  <div class="story-descb">
+                      <img src="admin/<?php echo $row['url_image'];?>" class="img-fluid" alt="...">
+                      <h6><?php echo $row['tempat'];?></h6>
+                      <p><?php echo $row['deskripsi'];?></p>
+                      <p class="text-right" style="font-style: italic; font-weight: 700;"><a href="#"><?php echo $row['jasa_layanan']?></a></p>
                   </div>
-                  <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s"> 
-                    <div class="story-descb">
-                        <img src="img/chalcedony.jpg" class="img-fluid" alt="...">
-                        <h6>Chalcedony Residence</h6>
-                        <p>Jasa kontruksi tiang pancang dengan Bored Pile untuk perumahan Summarecon Serpong Cluster Chalcedony Residence, Tangerang - Banten.</p>
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s"> 
-                    <div class="story-descb">
-                        <img src="img/jababeka.jpg" class="img-fluid" alt="...">
-                        <h6>Jababeka Residence</h6>
-                        <p>Jasa kontruksi tiang pancang menggunakan Strauss Pile untuk perumahan Jababeka Residence, Cikarang - Bekasi, Jawa Barat.</p>
-                    </div>
-                  </div>  
-                  <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s"> 
-                    <div class="story-descb">
-                        <img src="img/alfamidi.jpg" class="img-fluid" alt="...">
-                        <h6>Kantor Alfamidi Surabaya</h6>
-                        <p>Jasa kontruksi tiang pancang menggunakan Bore Pile untuk gedung kantor Alfamidi cabang Surabaya.</p>
-                    </div>
-                  </div>       
+                </div>
+                <?php } ?>       
                 </div>
             </div>
         </div>
