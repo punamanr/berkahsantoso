@@ -83,7 +83,7 @@ $hasil = mysqli_query($conn,$sql);
                         <ul aria-labelledby="messages" class="dropdown-menu">
                             <?php while ($email = mysqli_fetch_assoc($hasil)) { ?>
                             <li>
-                                <a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                <a rel="nofollow" href="email-detail/<?php echo $email['id'];?>/<?php echo $row['total'];?>" class="dropdown-item d-flex">
                                     <div class="msg-profile"> <img src="img/user.png" alt="..." class="img-fluid rounded-circle"></div>
                                     <div class="msg-body">
                                         <h3 class="h5 msg-nav-h3"><?php echo $email['nama_lengkap'];?></h3><span>Mengirim Pesan</span>
