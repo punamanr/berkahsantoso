@@ -33,6 +33,8 @@ RewriteRule ^admin/model/articles/add-articles/?$ admin/model/articles/add_artic
 RewriteRule ^admin/model/articles/update-articles/?$ admin/model/articles/update_articles.php
 RewriteRule ^admin/model/articles/delete-article/([0-9]+)/(.*)?$ admin/model/articles/delete_article.php?id=$1&judul=$2 [NC,L]
 RewriteRule ^add-contact?$ app/add_contact.php
+RewriteRule ^admin/medsos?$ admin/mediasosial.php
+RewriteRule ^admin/model/medsos/edit-medsos?$ admin/model/medsos/edit_medsos.php
 RewriteRule ^admin/email?$ admin/email.php
 RewriteRule ^admin/email-detail/([0-9]+)/([0-9]+)/?$ admin/email_detail.php?id=$1&total=$2
 RewriteRule ^admin/model/contacts/delete-contact/([0-9]+)/(.*)?$ admin/model/contacts/delete_contact.php?id=$1&nama=$2 [NC,L]
