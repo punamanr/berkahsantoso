@@ -48,18 +48,38 @@
 
                 <!-- Latest Tweets -->
                 <div class="col-md-3 col-sm-6">
+                  <?php 
+                  $sql = "SELECT * from address";
+                  $result = mysqli_query($conn,$sql);
+
+                  while ($row = mysqli_fetch_assoc($result)) {
+                  ?>
                   <div class="heading-footer"><h2>Alamat Kantor</h2></div>
                   <address class="address-details-f">
-                    Jl. Bona Timur III No 4 <br>
-                    Cikokol, Tangerang <br>
-                    Phone: 0857 4024 6283 <a href=""><i class="fa top-social fa-whatsapp"></i></a> <br>
-                    Email: <a href="mailto:info@berkahsantoso.com" class="">info@berkahsantoso.com</a>
-                  </address>   
+                    <?php echo $row['alamat'];?><br>
+                    Phone: <?php echo $row['telepon'];?> <br>
+                    Email: <a href="mailto:<?php echo $row['email'];?>" class=""><?php echo $row['email'];?></a>
+                  </address>  
+                  <?php } ?> 
+                  <?php 
+                  $sql = "SELECT link FROM mediasosial where nama_medsos = 'Facebook'";
+                  $result2=mysqli_query($conn,$sql);
+                  $facebook=mysqli_fetch_assoc($result2);
+                  $sql = "SELECT link FROM mediasosial where nama_medsos = 'Google Plus'";
+                  $result2=mysqli_query($conn,$sql);
+                  $google=mysqli_fetch_assoc($result2);
+                  $sql = "SELECT link FROM mediasosial where nama_medsos = 'Twitter'";
+                  $result2=mysqli_query($conn,$sql);
+                  $twitter=mysqli_fetch_assoc($result2);
+                  ?>
                   <ul class="list-inline social-icon-f top-data">
-                    <li><a href="#" target="_empty"><i class="fa top-social fa-facebook"></i></a></li>
-                    <li><a href="#" target="_empty"><i class="fa top-social fa-twitter"></i></a></li>
-                    <li><a href="#" target="_empty"><i class="fa top-social fa-google-plus"></i></a></li> 
+
+                    <li><a href="<?php echo $facebook['link'];?>" target="_empty"><i class="fa top-social fa-facebook"></i></a></li>
+                    <li><a href="<?php echo $twitter['link'];?>" target="_empty"><i class="fa top-social fa-twitter"></i></a></li>
+                    <li><a href="<?php echo $google['link'];?>" target="_empty"><i class="fa top-social fa-google-plus"></i></a></li> 
+
                   </ul>
+
                 </div>
                 <!-- End Latest Tweets -->
               </div>

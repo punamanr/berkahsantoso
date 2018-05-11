@@ -26,6 +26,50 @@ if (!empty($_SESSION['login_username']))
                 <!--***** ADMIN USER *****-->
                 <div class="card form" id="form1">
                   <div class="card-header">
+                    <h3>Alamat Perusahaan</h3>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <br>
+                      <!--a href="admin_form.php" class="btn float-right btn-sm">Tambah Admin</a-->
+                      <form  action="model/medsos/edit-address" method="POST">
+                        <div class="row">
+                            <?php 
+                            $sql = "SELECT * from address";
+                            $result2 = mysqli_query($conn,$sql);
+
+                            while ( $row = mysqli_fetch_assoc ($result2)) {
+                            ?>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email</label>
+                                    <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?php echo $row['email'];?>" placeholder="Alamat email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Telepon</label>
+                                    <input type="text" class="form-control" name="telepon" id="exampleInputPassword1" placeholder="Nomor Telepon" value="<?php echo $row['telepon'];?>">
+                                </div>  
+                                <div class="form-group">
+                                    <label for="exampleTextarea">Alamat Kantor</label>
+                                    <textarea class="form-control" id="exampleTextarea" rows="3" name="alamat_kantor"><?php echo $row['alamat']; ?></textarea>
+                                </div>
+                            </div>
+                            <?php } ?>
+                        </div> 
+                        <button type="submit" class="btn btn-general btn-blue mr-2">Submit</button>  
+                        <button type="reset" class="btn btn-general btn-white">Cancel</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+
+            <div class="row">
+              <div class="col-md-12">
+                <!--***** ADMIN USER *****-->
+                <div class="card form" id="form1">
+                  <div class="card-header">
                     <h3>Media Sosial</h3>
                   </div>
                   <div class="row">
@@ -45,14 +89,16 @@ if (!empty($_SESSION['login_username']))
                         <tbody>
                           <?php
                             $no = 1;   
+                            $no_id = 0;
+                            $no_link = 0;
                             while($row = mysqli_fetch_assoc($result)) {
                           ?>
                           <tr>
                             <th scope="row"><?php echo $no++;?></th>
                             <td><?php echo strtoupper($row['nama_medsos']);?></td>
-                            <td><input type="text" name="link" class="form-control" value="<?php echo $row['link'];?>">
-                                <input type="hidden" name="nama_medsos" value="<?php echo $row['nama_medsos'];?>">
-                                <input type="hidden" name="id" value="<?php echo $row['id'];?>">
+                            <td><input type="text" name="link<?php echo $no_link++;?>" class="form-control" value="<?php echo $row['link'];?>">
+                                <input type="hidden" name="nama_medsos[]" value="<?php echo $row['nama_medsos'];?>">
+                                <input type="hidden" name="id<?php echo $no_id++; ?>" value="<?php echo $row['id'];?>">
                             </td>
                             <td>                     
                               <center>
