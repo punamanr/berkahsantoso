@@ -51,7 +51,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                     <i class="fa fa-envelope"></i> Email: <a href="mailto:info@berkahsantoso.com">info@berkahsantoso.com</a>
                   </li>
                   <li>
-                    <i class="fa fa-whatsapp"></i> Phone / WA: 0857 4024 6283
+                    <i class="fa fa-whatsapp"></i> Phone & WA: 085740246283 / 082133153421
                   </li>
                 </ul>
               </div> 
